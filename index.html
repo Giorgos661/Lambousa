@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="anchor.png">
+    <title>Lambousa Encyclopedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="/img/anchor.png">
+            <!--<span class="logo-text">
+                <span class="Lambousa">Lambousa</span>
+                <span><br>Encyclopedia</span>
+            </span>-->
+        </a>
+    <ul class="nav-links">
+        <li ><a href="#" class="nav-link active">Home</a></li>
+        <li><a href="index.html" class="nav-link">E-Book</a></li>
+        <li><a href="#" class="nav-link">E-Gastronomy Lab</a></li>
+        <li><a href="#" class="nav-link">Gallery</a></li>
+        <li><a href="#" class="nav-link">Contact</a></li>
+        <div class="flags">
+        <ul>
+            <li><a href="#" class="nav-link"><img src="/img/Greece.png"></a></li>
+            <li><a href="#" class="nav-link"><img src="/img/Uk.png"></a></li>
+        </ul>
+        </div>
+    </ul>
+    <img src="/img/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1>LAMBOUSA</h1>
+            <div class="line"></div>
+            <div class="text-animate">
+                <h3 class="hide-on-mobile">A boat with tradition</h3>
+            </div>
+            <p>
+                Lambousa ,a beloved fixture in Cyprus. For four decades, it symbolized the heart of our maritime heritage, providing livelihoods and etching its name in Cyprus fishing history. 
+            </p>
+            <div class="btn-box">
+                <a href="#" class="btn">Read More</a>
+            </div> 
+        </div>
+    </header>
+
+    <section>
+        <div class="title">
+            <h1>A treasure of Cypriot fishing</h1>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu');
+        })
+    </script>
+</body>
+</html>
