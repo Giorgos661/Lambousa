@@ -41,66 +41,91 @@
     
     <div class="slider">
         <div class="slide-track">
-            <a href="./img/photos/1.jpg" class="slide" data-lightbox="models">
+            <a href="./img/photos/1.jpg" class="slide photo molos" data-lightbox="models">
                 <img src="./img/photos/1.jpg">
             </a>
-            <a href="./img/photos/2.jpg" class="slide" data-lightbox="models">
+            <a href="./img/photos/2.jpg" class="slide photo molos" data-lightbox="models">
                 <img src="./img/photos/2.jpg">
             </a>
-            <a href="./img/photos/3.jpg" class="slide" data-lightbox="models">
+            <a href="./img/photos/3.jpg" class="slide photo molos" data-lightbox="models">
                 <img src="./img/photos/3.jpg">
             </a>
-            <a href="./img/photos/4.jpg" class="slide" data-lightbox="models">
+            <a href="./img/photos/4.jpg" class="slide photo molos" data-lightbox="models">
                 <img src="./img/photos/4.jpg">
             </a>
-            <a href="./img/photos/5.jpg" class="slide" data-lightbox="models">
+            <a href="./img/photos/5.jpg" class="slide photo molos" data-lightbox="models">
                 <img src="./img/photos/5.jpg">
             </a>
-            <a href="./img/photos/6.jpg" class="slide" data-lightbox="models">
+            <a href="./img/photos/6.jpg" class="slide photo molos" data-lightbox="models">
                 <img src="./img/photos/6.jpg">
             </a>
-            <a href="./img/photos/7.jpg" class="slide" data-lightbox="models">
+            <a href="./img/photos/7.jpg" class="slide photo molos" data-lightbox="models">
                 <img src="./img/photos/7.jpg">
             </a>
-            <a href="./img/photos/8.jpg" class="slide" data-lightbox="models">
+            <a href="./img/photos/8.jpg" class="slide photo oldport" data-lightbox="models">
                 <img src="./img/photos/8.jpg">
             </a>
-            <a href="./img/photos/9.jpg" class="slide" data-lightbox="models">
+            <a href="./img/photos/9.jpg" class="slide photo oldport" data-lightbox="models">
                 <img src="./img/photos/9.jpg">
             </a>
         </div>
     </div>
+    <section class="gallery-section">
+    <ul>
+        <li class="list active" data-filter="all">All</li>
+        <li class="list" data-filter="oldport">Old Port</li>
+        <li class="list" data-filter="molos">Molos</li>
+        <li class="list" data-filter="shipyard">Shipyard</li>
+    </ul>
     <div class="container">
         <div class="gallery">
-            <a href="./img/photos/1.jpg" data-lightbox="models">
+            <a href="./img/photos/1.jpg" class="photo molos" data-lightbox="models">
                 <img src="./img/photos/1.jpg">
             </a>
-            <a href="./img/photos/2.jpg" data-lightbox="models">
+            <a href="./img/photos/2.jpg" class="photo molos" data-lightbox="models">
                 <img src="./img/photos/2.jpg">
             </a>
-            <a href="./img/photos/3.jpg" data-lightbox="models">
+            <a href="./img/photos/3.jpg" class="photo molos" data-lightbox="models">
                 <img src="./img/photos/3.jpg">
             </a>
-            <a href="./img/photos/4.jpg" data-lightbox="models">
+            <a href="./img/photos/4.jpg" class="photo molos" data-lightbox="models">
                 <img src="./img/photos/4.jpg">
             </a>
-            <a href="./img/photos/5.jpg" data-lightbox="models">
+            <a href="./img/photos/5.jpg" class="photo molos" data-lightbox="models">
                 <img src="./img/photos/5.jpg">
             </a>
-            <a href="./img/photos/6.jpg" data-lightbox="models">
+            <a href="./img/photos/6.jpg" class="photo molos" data-lightbox="models">
                 <img src="./img/photos/6.jpg">
             </a>
-            <a href="./img/photos/7.jpg" data-lightbox="models">
+            <a href="./img/photos/7.jpg" class="photo molos" data-lightbox="models">
                 <img src="./img/photos/7.jpg">
             </a>
-            <a href="./img/photos/8.jpg" data-lightbox="models">
+            <a href="./img/photos/8.jpg" class="photo oldport" data-lightbox="models">
                 <img src="./img/photos/8.jpg">
             </a>
-            <a href="./img/photos/9.jpg" data-lightbox="models">
+            <a href="./img/photos/9.jpg" class="photo oldport" data-lightbox="models">
                 <img src="./img/photos/9.jpg">
             </a>
         </div>
     </div>
+    </section>
     <script src="lightbox-plus-jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.list').click(function(){
+            const value = $(this).attr('data-filter');
+            if(value === 'all'){
+                $('.photo').show('1000');
+            } else {
+                $('.photo').hide();
+                $('.' + value.toLowerCase()).show('1000');
+            }
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    });
+    </script>
+    
 </body>
 </html>

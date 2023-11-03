@@ -40,6 +40,7 @@ body,html{
   background-color: #1F618D;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 
 .nav-links{
@@ -337,7 +338,7 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 80px;
 }
 
 .gallery{
@@ -370,6 +371,7 @@ section{
   place-items: center;
   overflow: hidden;
   transform: translateY(200px);
+  z-index: 1;
 }
 
 .slide-track{
@@ -429,6 +431,27 @@ section{
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
+}
+
+.gallery-section ul{
+  margin-top: 200px;
+  display: flex;
+  margin-bottom: 10px;
+  place-content: center;
+}
+
+.gallery-section ul li{
+  list-style: none;
+  padding: 8px 20px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.gallery-section ul li.active{
+  background: #12beff;
+  color: #fff;
+  border-radius: 20px;
 }
 
 /* Keyframes Animation*/
