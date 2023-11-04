@@ -37,11 +37,17 @@ body,html{
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: #1F618D;
   position: fixed;
   top: 0;
   z-index: 2;
+  background-color: transparent; /* Set the initial background as transparent */
+  transition: background-color 0.3s ease-in-out;
 }
+
+.scrolled {
+  background-color: #1F618D; /* Background color when the page is scrolled */
+}
+
 
 .nav-links{
   display: flex;
