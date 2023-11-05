@@ -13,7 +13,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <a href="index.html" class="logo">
             <img src="./img/anchor.png">
             <!--<span class="logo-text">
@@ -102,6 +102,18 @@ DESIGN AND DEVELOPED BY GIORGOS NEOFYTOU AND STELIOS FOTIOU, IN THE FRAMEWORK OF
         menuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('mobile-menu');
         })
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            document.getElementById("navbar").classList.add("scrolled");
+            document.getElementById("navbar").classList.remove("transparent");
+        } else {
+            document.getElementById("navbar").classList.add("transparent");
+            document.getElementById("navbar").classList.remove("scrolled");
+        }
+        }
     </script>
 </body>
 </html>
