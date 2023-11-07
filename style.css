@@ -265,78 +265,103 @@ section{
   color:#12beff;
 }
 
-.row{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.row .card{
-  flex: 0 0 calc(50% - 10px); 
-  border-radius: 20px;
-  overflow: hidden;
+.service{
   position: relative;
-  border: 8px solid #fff;
+  top: 60px;
 }
 
-.row .card:last-child {
-  margin-right: 0;
-}
-
-.events .row{
-  margin-top: 50px;
-}
-
-.card{
-  width: 320px;
-  height: 500px;
-  border-radius: 20px;
-  overflow: hidden;
+.service-item {
   position: relative;
-  border: 8px solid #fff;
-  display: flex;
-  flex: wrap;
+  border-radius: 8px;
+  box-shadow: 0 0 45px rgba(0, 0, 0,0.2);
 }
 
-.card-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-.card-body{
+.service-item .service-img {
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
-  right: -100%;
-  position: absolute;
-  background: #1f3d4738;
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  color: #fff;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  left: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: -1;
 }
 
-.card:hover .card-body{
+.service-item .service-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.service-item .service-img::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.service-item .service-img::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #FFFFFF;
+  transition: .5s ease-out;
+  z-index: 2;
+}
+
+.service-item:hover .service-img::after {
+  width: 0;
+  left: auto;
   right: 0;
+}
+
+.service-item .service-text .service-icon {
+  width: 140px;
+  height: 140px;
+  padding: 15px;
+  margin-top: -70px;
+  margin-bottom: 40px;
+  background: #FFFFFF;
+  border-radius: 140px;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0, 0, 0, .1);
+}
+
+.service-item .service-text h5,
+.service-item .service-text p {
   transition: .5s;
 }
 
-.card-title{
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 500;
+.service-item:hover .service-text h5,
+.service-item:hover .service-text p {
+  color: #FFFFFF;
 }
 
-.card-info{
-  font-size: 16px;
-  line-height: 25px;
-  margin: 40px 0;
-  font-weight: 400;
+.service-item .service-text .btn {
+  color: var(--secondary);
+  background: #FFFFFF;
+  box-shadow: 0 0 45px rgba(0, 0, 0, .25);
+}
+
+.service-item .service-text .btn:hover {
+  color: var(--dark);
+  background: var(--secondary);
+}
+
+.container-xxl{
+  margin-top: 150px;
+  
 }
 
 .footer{
@@ -345,7 +370,7 @@ section{
   align-items: center; 
   justify-content: center; 
   width: 100%;
-  height: 295px;
+  height: 220px;
   padding: 20px 80px;
   margin: 0;
   background-color: #1b1b1b;
@@ -409,6 +434,16 @@ section{
 
 .slide-track:hover{
   animation-play-state: paused;
+}
+
+.btn{
+  transition: .5s;
+  font-weight: 500;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
 }
 
 @keyframes scroll{
@@ -644,19 +679,19 @@ section{
 }
 
 ion-icon[name="logo-facebook"]:hover {
-  color: #058dfd; /* Change to your desired hover color */
+  color: #058dfd; 
 }
 
 ion-icon[name="logo-twitter"]:hover {
-  color: #1da1f2; /* Change to your desired hover color */
+  color: #1da1f2; 
 }
 
 ion-icon[name="logo-youtube"]:hover {
-  color: #ff0000; /* Change to your desired hover color */
+  color: #ff0000; 
 }
 
 ion-icon[name="logo-instagram"]:hover {
-  color: #e1306c; /* Change to your desired hover color */
+  color: #e1306c; 
 }
 
 .map{
