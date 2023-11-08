@@ -265,6 +265,14 @@ section{
   color:#12beff;
 }
 
+.title1{
+  position: relative;
+  top: 150px;
+  text-align: center;
+  font-size: 4vmin;
+  color:#12beff;
+}
+
 .service{
   position: relative;
   top: 60px;
@@ -390,7 +398,7 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 46px;
 }
 
 .gallery{
@@ -403,7 +411,6 @@ section{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
 }
 
 .title-gallery{
@@ -416,7 +423,7 @@ section{
 
 .slider{
   height: 250px;
-  margin: auto;
+  margin: 0 auto;
   position: relative;
   width: 90%;
   display: grid;
@@ -518,7 +525,7 @@ section{
 
 .contactUs{
   position: relative;
-  margin-top: 100px;
+  margin-top: 180px;
   width: 100%;
   padding: 40px 100px;
 }
@@ -813,4 +820,8 @@ img{
 
 img:hover{
   transform: scale(1.1);
+}
+
+.container-xxl .no-hover img:hover{
+  transform: none;
 }
