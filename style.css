@@ -814,6 +814,37 @@ ion-icon[name="logo-instagram"]:hover {
     }
 }
 
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+@media(prefers-reduced-motion){
+  .hidden{
+    transition: none;
+  }
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.no-hover:nth-child(2){
+  transition-delay: 100ms;
+}
+
+.no-hover:nth-child(3){
+  transition-delay: 200ms;
+}
+
+.no-hover:nth-child(4){
+  transition-delay: 300ms;
+}
+
 img{
   transition: transform .3s ease;
 }
