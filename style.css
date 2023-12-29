@@ -963,3 +963,15 @@ img:hover {
 .gallery-body .flags {
   margin-top: 5px;
 }
+.image-container {
+  text-align: center; /* Center the image */
+  margin-bottom: 30px; /* Adjust the space below the image */
+}
+
+.title1 {
+  margin-top: 30px; /* Adjust the space above the title */
+}
+
+.content {
+  margin-top: 20px; /* Adjust the space above the content */
+}
