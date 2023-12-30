@@ -41,26 +41,29 @@
       </ul>
       <img src="./img/menu-btn.png" alt="menu" class="menu-btn" />
     </nav>
-    <div class="content-container">
+    
       <div class="image-container">
-          <img src="img/photos/CYLHA.06.005.001%20(66).JPG" alt="Discover Lambousa" />
+          
       </div>
+
       <br><br>
-      <div class="title">
-          <h2>Discover Lambousa</h2>
-          <br>
+
+      <div class="content-container">
+        <div class="title">
+            <h2>Discover Lambousa</h2>
+            <br>
+        </div>
+    
+        <div class="content">
+        <p>Step into the captivating world of Lambousa, a venerable historical trawler that has etched its legacy in the maritime tapestry of Limassol. Our digital platform is a curated voyage through time, an exploration of the rich history and profound significance that Lambousa carries. This isn't merely a vessel, it's a living testament to the enduring spirit of traditional fishing that has become intertwined with the very fabric of our cultural heritage.</p>
+        <br>
+        <p>Lambousa, now under the stewardship of the Limassol municipality, transcends its role as a mere fishing trawler. It stands as a symbol of resilience, a vessel that has weathered the tides of time and carries with it stories of bygone eras. The creaking of its timeworn planks narrates tales of seafaring endeavors, casting a nostalgic spell that transports us to an era where the sea was both a livelihood and a way of life.</p>
+        <br>
+        <p>However, Lambousa's significance extends beyond its wooden hull and rusted anchors. Our mission goes beyond the mere documentation of its history; we aspire to ignite a flame of understanding and appreciation for the art of fishing, especially among the younger generation. In a world dominated by technology, Lambousa serves as a poignant reminder of the symbiotic relationship between the island and the sea. It's a call to preserve not just a vessel but a cultural heritage that has shaped the identity of our society.</p>
+        <br>
+        <p>As you delve into the intricate details of Lambousa's past, envision the toil of fishermen, the camaraderie forged at sea, and the indomitable spirit that pervaded every journey. Our platform is more than an information repository, it's a voyage through emotions, a celebration of the profound connection between our island and the art of fishing. Join us in unraveling the layers of Lambousa's narrative, and let its history resonate with you, leaving an indelible mark on your understanding of our maritime legacy.</p>
+        <br>
       </div>
-  
-      <div class="content">
-      <p>Step into the captivating world of Lambousa, a venerable historical trawler that has etched its legacy in the maritime tapestry of Limassol. Our digital platform is a curated voyage through time, an exploration of the rich history and profound significance that Lambousa carries. This isn't merely a vessel; it's a living testament to the enduring spirit of traditional fishing that has become intertwined with the very fabric of our cultural heritage.</p>
-      <br>
-      <p>Lambousa, now under the stewardship of the Limassol municipality, transcends its role as a mere fishing trawler. It stands as a symbol of resilience, a vessel that has weathered the tides of time and carries with it stories of bygone eras. The creaking of its timeworn planks narrates tales of seafaring endeavors, casting a nostalgic spell that transports us to an era where the sea was both a livelihood and a way of life.</p>
-      <br>
-      <p>However, Lambousa's significance extends beyond its wooden hull and rusted anchors. Our mission goes beyond the mere documentation of its history; we aspire to ignite a flame of understanding and appreciation for the art of fishing, especially among the younger generation. In a world dominated by technology, Lambousa serves as a poignant reminder of the symbiotic relationship between the island and the sea. It's a call to preserve not just a vessel but a cultural heritage that has shaped the identity of our society.</p>
-      <br>
-      <p>As you delve into the intricate details of Lambousa's past, envision the toil of fishermen, the camaraderie forged at sea, and the indomitable spirit that pervaded every journey. Our platform is more than an information repository; it's a voyage through emotions, a celebration of the profound connection between our island and the art of fishing. Join us in unraveling the layers of Lambousa's narrative, and let its history resonate with you, leaving an indelible mark on your understanding of our maritime legacy.</p>
-      <br>
-    </div>
     </div>
     <section class="footer">
       <p>
@@ -101,15 +104,18 @@
 
 <style>
 .content-container {
-  max-width: 1000px; /* Adjust this to match your image's width */
+  max-width: 70%; /* Adjust this to match your image's width */
   margin: 0 auto; /* Center the container */
 }
 
-.image-container img {
-  max-width: 100%; /* Make the image responsive */
-  height: auto; /* Maintain the aspect ratio */
-  display: block; /* Remove any extra space below the image */
-  margin: 0 auto; /* Center the image */
+.image-container {
+  width: 100%; /* Make the image responsive */
+  height: 500px; /* Maintain the aspect ratio */
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("img/photos/CYLHA.06.005.001%20(66).JPG");
+  pointer-events: none;
 }
 
 .title1 {
@@ -118,7 +124,7 @@
 }
 
 .content {
-  margin: 20px 0; /* Adjust space around the content */
+  margin: 20px 0 80px; /* Adjust space around the content */
   text-align: justify; /* Optional: if you want justified text */
 }
 
