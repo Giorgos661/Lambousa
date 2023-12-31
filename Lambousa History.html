@@ -41,29 +41,37 @@
       </ul>
       <img src="./img/menu-btn.png" alt="menu" class="menu-btn" />
     </nav>
-    <div class="content-container">
+    
       <div class="image-container">
-          <img src="./img/photos/6.jpg" alt="Lambousa Heritage Project" />
+          
       </div>
+
       <br><br>
+
+      <div class="content-container">
       <div class="title">
           <h2>Lambousa History</h2>
           <br>
       </div>
   
       <div class="content">
-      <p>Embark on a journey through the storied waters aboard the Lambousa, a historic fishing trawler that has become a cornerstone of Limassol's maritime heritage. Nestled in the heart of the Mediterranean, Lambousa is more than a vessel; it's a chronicle of the sea, a symbol of the enduring bond between the island of Cyprus and the ancient art of fishing.</p>
+      <p>Lambousa, originally named Omonoia, holds a rich maritime history as it was meticulously crafted in Piraeus, Greece, in 1955. The vessel, measuring an impressive 25 meters in length, served as a traditional fishing boat, embodying the essence of a bygone era. In 1965, it found a new home in Cyprus, specifically the port of Famagusta, where it underwent a significant transformation. The vessel was rechristened Lambousa, taking its name from the place of origin of its new owner.</p>
       <br>
-      <p>Lambousa’s legacy stretches back through the decades, a testament to the resilience and ingenuity of those who braved the Mediterranean waves. This trawler, now under the auspices of the Limassol municipality, represents more than a fishing tool; it's a living museum, a repository of stories and traditions that echo the voices of the past.</p>
+      <p>With a substantial capacity of 48 tons, Lambousa was equipped with two majestic masts, adding to its distinctive character. Its operational speed of 10 knots spoke to its efficiency in navigating the Mediterranean waters. Not only was Lambousa one of the largest fishing boats of its kind, but it also marked the end of an era, being among the last traditional vessels manufactured in both Greece and Cyprus.</p>
       <br>
-      <p>As you explore the Lambousa's history, you'll discover tales of fishermen who toiled under the sun and stars, their lives inextricably linked to the rhythms of the sea. Each creak of its timeworn wood, each rusted anchor, speaks of their perseverance, skill, and camaraderie—a testament to a lifestyle that has shaped the cultural tapestry of Cyprus.</p>
+      <p>Over its impressive 50-year tenure as a fishing vessel, Lambousa played a vital role in the Mediterranean, contributing significantly to the region's maritime activities and economic vitality. In 2005, the Municipality of Limassol took ownership of this maritime gem, recognizing its historical importance and the need to preserve its legacy.</p>
       <br>
-      <p>But Lambousa’s journey is not just about preserving the past. It's about igniting a passion for maritime heritage in the hearts of the younger generation. In an era dominated by rapid technological advancement, Lambousa stands as a poignant reminder of the symbiotic relationship between humans and the sea, urging us to preserve not just a vessel, but a way of life that has defined the identity of our island.</p>
+      <p>Beyond its utilitarian purpose, Lambousa holds a unique distinction as the first floating maritime museum in Cyprus. Its transformation into a museum reflects a commitment to educating and entertaining visitors about the island's maritime heritage. The museum offers a captivating journey through time, showcasing the vessel's design, construction, and the various fishing techniques employed during its active years.</p>
       <br>
       <p>Through our digital platform, we invite you to delve into the intricate details of Lambousa's storied past. Experience the life of fishermen, the strength of their community, and the unyielding spirit that powered every voyage. Our platform is an emotional odyssey, a tribute to the profound connection between Cyprus and the art of fishing.</p>
       <br>
-      <p>Join us in peeling back the layers of Lambousa's narrative. Let its history resonate with you, leaving an indelible mark on your understanding of our maritime legacy. This is more than a story of a fishing trawler; it's an invitation to celebrate and perpetuate a rich, cultural heritage that has long defined the spirit of Limassol.</p>
+      <p>Today, Lambousa stands as a testament to the vanishing tradition of traditional fishing boats. Its role extends beyond its physical presence, symbolizing the cultural and historical ties between Cyprus and Greece. As one explores its decks, the vessel narrates stories of the evolving maritime technology and the adaptations made over the years.</p>
       <br>
+      <p>The significance of Lambousa transcends its material form. It represents a bridge connecting generations, aiming to instill a sense of appreciation for maritime heritage among the younger population. Through its status as a floating museum, Lambousa fulfills a dual purpose—preserving the tangible history of a vessel and fostering an understanding of the socio-economic dynamics that shaped the maritime industry in Cyprus and the Mediterranean.</p>
+      <br>
+      <p>In essence, Lambousa encapsulates the spirit of resilience, adaptation, and cultural continuity. Its transformation into a floating museum ensures that its legacy lives on, captivating the imagination of visitors and inspiring an enduring appreciation for the maritime past of Limassol and the broader Mediterranean region.</p>
+      <br>
+
     </div>
     </div>
     <section class="footer">
@@ -109,23 +117,56 @@
   margin: 0 auto; /* Center the container */
 }
 
-.image-container img {
-  max-width: 100%; /* Make the image responsive */
-  height: auto; /* Maintain the aspect ratio */
-  display: block; /* Remove any extra space below the image */
-  margin: 0 auto; /* Center the image */
+.image-container {
+  width: 100%; /* Make the image responsive */
+  height: 600px; /* Maintain the aspect ratio */
+  background-position: center -300px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("./img/photos/CYLHA.06.005.001 (62).JPG");
   pointer-events: none;
 }
 
 .title1 {
   text-align: center; /* Center the title */
-  margin: 20px 0; /* Adjust space around the title */
+  margin: -5px 0; /* Adjust space around the title */
 }
 
 .content {
-  margin: 20px 0; /* Adjust space around the content */
+  margin: -30px 0; /* Adjust space around the content */
   text-align: justify; /* Optional: if you want justified text */
 }
+
+.footer{
+    margin-top: 110px;
+  }
+
+   /* Add this new style for the glowing border animation on the third paragraph */
+   .content p:nth-child(3) {
+    position: relative;
+    padding: 20px; /* Adjust the padding as needed */
+  }
+  
+  .content p:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 0 #3498db;
+    border-radius: 5px;
+    animation: glowAnimation 2s infinite alternate;
+  }
+  
+  @keyframes glowAnimation {
+    0% {
+      box-shadow: 0 0 10px 0 #3498db;
+    }
+    100% {
+      box-shadow: 0 0 20px 10px #3498db;
+    }
+  }
 
 /* Responsive design adjustments for tablets */
 @media (max-width: 768px) {

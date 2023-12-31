@@ -110,23 +110,45 @@
 
 .image-container {
   width: 100%; /* Make the image responsive */
-  height: 500px; /* Maintain the aspect ratio */
-  background-position: center;
+  height: 600px; /* Maintain the aspect ratio */
+  background-position: center top;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("img/photos/CYLHA.06.005.001%20(66).JPG");
+  background-image: url("./img/photos/CYLHA.06.005.001%20(66).JPG");
   pointer-events: none;
 }
 
-.title1 {
+.title {
   text-align: center; /* Center the title */
-  margin: 20px 0; /* Adjust space around the title */
+  margin: -5px 0; /* Adjust space around the title */
 }
 
 .content {
-  margin: 20px 0 80px; /* Adjust space around the content */
+  margin: -30px 0; /* Adjust space around the content */
   text-align: justify; /* Optional: if you want justified text */
 }
+
+.footer{
+    margin-top: 110px;
+  }
+
+   /* Add this new style for the glowing border animation on the third paragraph */
+   .content p:nth-child(3) {
+    position: relative;
+    padding: 20px; /* Adjust the padding as needed */
+  }
+  
+  .content p:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 0 #3498db;
+    border-radius: 5px;
+    animation: glowAnimation 2s infinite alternate;
+  }
 
 /* Responsive design adjustments for tablets */
 @media (max-width: 768px) {
@@ -142,6 +164,15 @@
     font-size: 14px; /* Smaller font size for paragraphs on smaller screens */
   }
 }
+
+@keyframes glowAnimation {
+    0% {
+      box-shadow: 0 0 10px 0 #3498db;
+    }
+    100% {
+      box-shadow: 0 0 20px 10px #3498db;
+    }
+  }
 
 /* Further adjustments for very small screens (phones) */
 @media (max-width: 480px) {
@@ -162,6 +193,5 @@
     font-size: 12px;
   }
 }
-
 
 </style>
