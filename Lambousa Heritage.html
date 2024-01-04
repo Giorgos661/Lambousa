@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./img/anchor.png" />
     <title>Lambousa</title>
-    <!-- <link href="bootstrap.min.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="style.css" />
     <link href="bootstrap.min.css" rel="stylesheet">
   </head>
@@ -40,12 +39,11 @@
         </div>
       </ul>
       <img src="./img/menu-btn.png" alt="menu" class="menu-btn" />
+      
     </nav>
 
     
-      <div class="image-container">
-          
-      </div>
+      
 
       <br><br>
 
@@ -69,7 +67,7 @@
     <section class="footer">
       <p>
         © COPYRIGHT 2023. ALL RIGHTS RESERVED BY THE CYPRUS UNIVERSITY OF
-        TECHNOLOGY. DESIGN AND DEVELOPED BY
+        TECHNOLOGY. DESIGNED AND DEVELOPED BY
         <a href="https://www.linkedin.com/in/giorgos-neofytou-a4b1b1245/"
         target="_blank">GIORGOS NEOFYTOU</a>  AND <a href="https://www.linkedin.com/in/stelios-fotiou-b3351529a/" target="_blank">STELIOS FOTIOU</a
         >
@@ -109,72 +107,72 @@
   }
   
   .image-container {
-  width: 100%; /* Make the image responsive */
-  height: 500px; /* Maintain the aspect ratio */
-  background-position: center;
+  width: 100%;
+  height: 500px;
+  background-position: center -300px;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("./img/photos/9.jpg");
+  background-image: url("./img/photos/CYLHA.06.005.001 (65).jpg");
   pointer-events: none;
 }
-  
-  .title {
-    text-align: center;
-    margin: -5px 0; /* Adjust the margin as needed */
+
+.title {
+  text-align: center;
+  margin: -5px 0; /* Adjust the margin as needed */
+}
+
+.content {
+  margin: -30px 0;
+  text-align: justify;
+}
+
+.footer{
+  margin-top: 110px;
+}
+
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 10px 0 #3498db;
   }
-  
-  .content {
-    margin: -30px 0;
-    text-align: justify;
+  100% {
+    box-shadow: 0 0 20px 10px #3498db;
+  }
+}
+
+/* Responsive design adjustments for tablets */
+@media (max-width: 768px) {
+  .content-container {
+    max-width: 100%;
   }
 
-  .footer{
-    margin-top: 110px;
+  .title h2 {
+    font-size: 24px;
   }
-  
-  @keyframes glowAnimation {
-    0% {
-      box-shadow: 0 0 10px 0 #3498db;
-    }
-    100% {
-      box-shadow: 0 0 20px 10px #3498db;
-    }
+
+  .content p {
+    font-size: 14px;
   }
-  
-  /* Responsive design adjustments for tablets */
-  @media (max-width: 768px) {
-    .content-container {
-      max-width: 100%;
-    }
-  
-    .title h2 {
-      font-size: 24px;
-    }
-  
-    .content p {
-      font-size: 14px;
-    }
+}
+
+/* Further adjustments for very small screens (phones) */
+@media (max-width: 480px) {
+  .content-container {
+    max-width: 90%;
   }
-  
-  /* Further adjustments for very small screens (phones) */
-  @media (max-width: 480px) {
-    .content-container {
-      max-width: 90%;
-    }
-  
-    .image-container img {
-      max-width: 70%;
-      margin: 0 auto;
-    }
-  
-    .title h2 {
-      font-size: 20px;
-    }
-  
-    .content p {
-      font-size: 12px;
-    }
+
+  .image-container img {
+    max-width: 70%;
+    margin: 0 auto;
   }
+
+  .title h2 {
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 12px;
+  }
+}
 
 </style>
 
