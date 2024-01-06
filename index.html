@@ -17,6 +17,10 @@
 </head>
 <body>
 
+    <div id="loading-screen">
+        <div id="loading-spinner"></div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar" id="top">
         <a href="#top" class="logo">
@@ -27,7 +31,7 @@
             <li><a href="underconstruction/underconstruction.html" class="nav-link">E-Book</a></li>
             <li><a href="underconstruction/underconstruction.html" class="nav-link">E-Trawler Lab</a></li>
             <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="acknowledgements.html" class="nav-link">Gallery</a></li>
+            <li><a href="acknowledgements.html" class="nav-link">Acknowledgements</a></li>
             <li><a href="contact.html" class="nav-link">Contact</a></li>
             <div class="flags">
             <ul>
@@ -188,17 +192,23 @@
 
     <section class="footer">
         <p>
-            © COPYRIGHT 2023. ALL RIGHTS RESERVED BY THE CYPRUS UNIVERSITY OF TECHNOLOGY.
-            DESIGNED AND DEVELOPED BY <a href="https://www.linkedin.com/in/giorgos-neofytou-a4b1b1245/" target="_blank">GIORGOS NEOFYTOU</a>  AND <a href="https://www.linkedin.com/in/stelios-fotiou-b3351529a/" target="_blank">STELIOS FOTIOU</a> , IN THE FRAMEWORK OF BSC THESIS
+          © COPYRIGHT 2023. ALL RIGHTS RESERVED BY THE CYPRUS UNIVERSITY OF
+          TECHNOLOGY. DESIGNED AND DEVELOPED BY
+          <a href="https://www.linkedin.com/in/giorgos-neofytou-a4b1b1245/"
+          target="_blank">GIORGOS NEOFYTOU</a>  AND <a href="https://www.linkedin.com/in/stelios-fotiou-b3351529a/" target="_blank">STELIOS FOTIOU</a
+          >
+          , IN THE FRAMEWORK OF BSC THESIS
         </p>
         <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
-            <img src="./img/by-nc-nd.eu.png" width="100" style="border-radius: 10%;">
-        </a>
-        
+          <img src="./img/by-nc-nd.eu.png" width="100" style="border-radius: 10%;">
+      </a>
         <p>
-            THIS WORK IS LICENSED UNDER A CREATIVE COMMONS ATTRIBUTION-NONCOMMERCIAL-NODERIVATIVES 4.0 INTERNATIONAL LICENSE.
+          THIS WORK IS LICENSED UNDER A <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+            CREATIVE COMMONS
+          ATTRIBUTION-NONCOMMERCIAL-NODERIVATIVES 4.0 INTERNATIONAL LICENSE.
+        </a>
         </p>
-    </section>
+      </section>
 
     <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
     <script defer src="app.js"></script>
@@ -223,6 +233,53 @@
         }
         }
     </script>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            const loadingScreen = document.getElementById("loading-screen");
+            const headerImage = new Image();
+
+           
+            headerImage.src = "./img/5.png";
+
+           
+            headerImage.onload = function() {
+                loadingScreen.style.display = "none";
+            };
+            
+        });
+    </script>
+
+<style>
+    
+    #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    #loading-spinner {
+        border: 8px solid #f3f3f3; 
+        border-top: 8px solid #3498db; 
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+</style>
     
 </body>
 </html>

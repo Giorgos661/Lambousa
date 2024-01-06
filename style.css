@@ -13,11 +13,16 @@
 }
 
 .logo {
+  box-sizing: border-box;
   max-height: 65px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0;
+  position: relative; /* Added position: relative */
 }
 
 .logo img {
-  margin-left: 70px;
+  left: 70px;
   width: 65px;
   height: 65px;
 }
@@ -969,7 +974,7 @@ img:hover {
 }
 
 .title1 {
-  margin-top: 30px; /* Adjust the space above the title */
+  margin-top: 20px; /* Adjust the space above the title */
 }
 
 .content {
