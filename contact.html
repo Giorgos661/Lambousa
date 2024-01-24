@@ -50,23 +50,23 @@
       <div class="box">
         <div class="contact form">
           <h3>Send us a message</h3>
-          <form>
+          <form method="post" action="send-email.php">
             <div class="formBox">
               <div class="row50">
                 <div class="inputBox">
-                  <span>First Name</span>
+                  <span>Full Name</span>
                   <input
                     type="text"
                     required="required"
-                    placeholder="First Name"
+                    placeholder="Full Name"
                   />
                 </div>
                 <div class="inputBox">
-                  <span>Last Name</span>
+                  <span>Subject</span>
                   <input
                     type="text"
                     required="required"
-                    placeholder="Last Name"
+                    placeholder="Subject"
                   />
                 </div>
               </div>
@@ -194,5 +194,7 @@
       })
     </script>
 
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="script.js"></script>
   </body>
 </html>
