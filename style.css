@@ -434,6 +434,15 @@ section > div {
   margin-top: 46px;
 }
 
+.container-eduspace{
+  max-width: 70%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
