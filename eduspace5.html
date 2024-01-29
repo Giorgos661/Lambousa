@@ -47,18 +47,22 @@
     </nav>
 
     <div class="title1">
-        <h2>Eduspace</h2>
+        <h2>Solve the Puzzles</h2>
         <div class="line"></div>
       </div>
-    <br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
 
     <div class="container-eduspace">
-      <label for="ageInput">
-        Put your age and we will navigate you to the according educational environment:
-      </label>
-      <input type="number" id="ageInput" placeholder="Enter your age" />
-      <button onclick="navigateToEducation()">Submit</button>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <iframe src="https://app.Lumi.education/api/v1/run/VVkFkB/embed" width="100" height="100" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
+
+    <iframe src="https://app.lumi.education/api/v1/run/in_UOb/embed" width="100" height="50" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation ; microphone; camera ; midi; encrypted-media "></iframe>
+
+    <br><br><br>
+
+    <iframe src="https://app.lumi.education/api/v1/run/bcryIL/embed" width="1088" height="720" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation; microphone ; camera; midi ; encrypted-media"></iframe>
+
+    <script src="https://app.lumi.education/api/v1/h5p/core/js/h5p-resizer.js" charset="UTF-8"></script>
 
     </div>
 
@@ -81,38 +85,25 @@
       </a>
       </p>
     </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script>
-      function navigateToEducation() {
-        const ageInput = document.getElementById('ageInput');
-        const age = parseInt(ageInput.value);
-
-        if (isNaN(age) || age < 1 || age > 123) {
-          alert('Please enter a valid age');
-          return;
-        }
-
-        if (age >= 1 && age <= 5) {
-          window.location.href = 'eduspace1.html';
-        } else if (age >= 6 && age <= 10) {
-          window.location.href = 'eduspace2.html';
-        } else if (age >= 11 && age <= 15) {
-          window.location.href = 'eduspace3.html';
-        } else if (age >= 16 && age <= 23) {
-          window.location.href = 'eduspace4.html';
-        } else if (age >= 24 && age <= 70) {
-          window.location.href = 'eduspace5.html';
-        } else {
-          window.location.href = 'eduspace6.html';
-        }
-      }
-
-      const menuBtn = document.querySelector('.menu-btn');
-      const navLinks = document.querySelector('.nav-links');
+      const menuBtn = document.querySelector('.menu-btn')
+      const navLinks = document.querySelector('.nav-links')
 
       menuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('mobile-menu');
-      });
+        navLinks.classList.toggle('mobile-menu')
+      })
     </script>
+
+<script src="script.js"></script>
 
 
   </body>
