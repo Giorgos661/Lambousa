@@ -49,7 +49,7 @@
     <div class="title1">
         <h2>Eduspace</h2>
         <div class="line"></div>
-      </div>
+    </div>
     <br><br><br><br><br><br><br><br><br><br>
 
     <div class="menu-box" id="menuBox">
@@ -78,6 +78,23 @@
       </a>
       </p>
     </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      const menuBtn = document.querySelector('.menu-btn')
+      const navLinks = document.querySelector('.nav-links')
+
+      menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu')
+      })
+    </script>
 
 <style>
 
@@ -114,10 +131,7 @@
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  color: #fff;
+  margin-top: 275px;
 }
 
 </style>
