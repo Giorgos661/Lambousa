@@ -440,7 +440,12 @@ section > div {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  
+}
+
+@media only screen and (max-width: 767px) {
+  .container-eduspace {
+    max-width: 90%;
+  }
 }
 
 .gallery {
