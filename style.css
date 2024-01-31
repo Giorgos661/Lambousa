@@ -553,6 +553,38 @@ section > div {
   transform: rotateZ(180deg);
 }
 
+ul li {
+  position: relative;
+  display: inline-block;
+}
+
+ul li ul.dropdown li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 20px; 
+}
+
+ul li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  background-color: #1f618d;
+  z-index: 999;
+}
+
+ul li:hover ul.dropdown {
+  display: block;
+}
+
+ul li ul.dropdown li {
+  display: block;
+  text-align: center;
+}
+
 .gallery-section ul {
   margin-top: 200px;
   display: flex;
