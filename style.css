@@ -442,6 +442,14 @@ section > div {
   margin-left: auto;
 }
 
+.container-mc {
+  max-width: 60%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+
 @media only screen and (max-width: 767px) {
   .container-eduspace {
     max-width: 90%;
