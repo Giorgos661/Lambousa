@@ -579,7 +579,7 @@ ul li ul.dropdown {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 150px;
+  width: 220px;
   background-color: #1f618d;
   z-index: 999;
 }
