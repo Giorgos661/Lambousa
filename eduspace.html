@@ -61,7 +61,7 @@
         <h2>Eduspace</h2>
         <div class="line"></div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br>
+    <br><br>
 
     <div class="menu-box" id="menuBox">
       <h2>Choose your age</h2>
@@ -123,6 +123,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.menu h2{
+  text-align: center;
+}
+
 .btn {
   display: block;
   margin: 10px auto;
@@ -147,8 +151,43 @@
   margin-top: 300px;
 }
 
-</style>
+/* Media Queries for Responsive Design */
 
+@media only screen and (max-width: 768px) {
+  .menu-box {
+    width: 50%;
+  }
+
+  .menu-box h2{
+    text-align: center;
+  }
+
+  .footer {
+    margin-top: 350px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .title1 {
+    margin-top: -10px; /* Adjusted to place the title higher */
+    text-align: center;
+  }
+
+  .menu-box {
+    width: 90%;
+    margin-top: -100px;
+  }
+
+  .menu-box h2{
+    text-align: center;
+  }
+
+  .footer {
+    margin-top: 420px; /* Adjusted to place the footer lower */
+  }
+}
+
+</style>
 
   </body>
 </html>
