@@ -413,11 +413,12 @@ section > div {
   width: 100%;
   min-height: 220px;
   padding: 20px 80px;
-  margin: 0;
+  margin-top: auto; /* Adjusted to push the footer to the bottom */
   background-color: #1b1b1b;
   color: #fff;
   text-align: center;
 }
+
 
 .back-video {
   position: absolute;
