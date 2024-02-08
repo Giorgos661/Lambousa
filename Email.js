@@ -1,4 +1,4 @@
-function SendEmail() {
+function SendMail() {
     var params = {
         subject : document.getElementById("subject").value,
         from_name : document.getElementById("fullName").value,
