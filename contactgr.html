@@ -7,6 +7,17 @@
     <title>Λάμπουσα</title>
     <link rel="stylesheet" href="style.css" />
     <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="Email.js"></script>
+    <script type="text/javascript"
+              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+        (function(){
+            emailjs.init({
+              publicKey: "taCHErBMvqj9n_qG8",
+            });
+        })();
+    </script>
   </head>
   <body class="contact-body">
     <!-- Navbar -->
@@ -70,6 +81,7 @@
                   <span>Θέμα</span>
                   <input
                     type="text"
+                    id="subject"
                     required="required"
                     placeholder="Θέμα"
                   />
@@ -85,7 +97,7 @@
                   <span>Κινητό</span>
                   <input
                     type="text"
-                    required="required"
+                    id="mobile"
                     placeholder="+357 99335544"
                   />
                 </div>
@@ -100,7 +112,7 @@
 
               <div class="row100">
                 <div class="inputBox">
-                  <input type="submit" value="Αποστολή" />
+                  <button onclick="SendMail()" type="submit" value="Send">ΥΠΟΒΟΛΗ</button>
                 </div>
               </div>
             </div>

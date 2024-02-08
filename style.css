@@ -722,7 +722,7 @@ ul li ul.dropdown li {
   margin-bottom: 10px;
 }
 
-.inputBox input[type='submit'] {
+.inputBox button {
   background: #12beff;
   color: #fff;
   border: none;

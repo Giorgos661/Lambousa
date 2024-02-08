@@ -7,7 +7,17 @@
     <title>Lambousa</title>
     <link rel="stylesheet" href="style.css" />
     <link href="bootstrap.min.css" rel="stylesheet">
-    
+    <script src="Email.js" type="text/javascript"></script>
+    <script type="text/javascript"
+              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <script type="text/javascript">
+        (function(){
+            emailjs.init({
+              publicKey: "taCHErBMvqj9n_qG8",
+            });
+        })();
+    </script>
   </head>
   <body class="contact-body">
     <!-- Navbar -->
@@ -62,13 +72,14 @@
       <div class="box">
         <div class="contact form">
           <h3>Send us a message</h3>
-          <form method="post" action="send-email.php">
+          <form>
             <div class="formBox">
               <div class="row50">
                 <div class="inputBox">
                   <span>Full Name</span>
                   <input
                     type="text"
+                    id="fullName"
                     required="required"
                     placeholder="Full Name"
                   />
@@ -78,6 +89,7 @@
                   <input
                     type="text"
                     required="required"
+                    id="subject"
                     placeholder="Subject"
                   />
                 </div>
@@ -86,13 +98,13 @@
               <div class="row50">
                 <div class="inputBox">
                   <span>Email</span>
-                  <input type="text" required="required" placeholder="lambousa@gmail.com" />
+                  <input type="text" id="email_id" required="required" placeholder="lambousa@gmail.com" />
                 </div>
                 <div class="inputBox">
                   <span>Mobile</span>
                   <input
                     type="text"
-                    required="required"
+                    id="mobile"
                     placeholder="+357 99335544"
                   />
                 </div>
@@ -101,13 +113,13 @@
               <div class="row100">
                 <div class="inputBox">
                   <span>Message</span>
-                  <textarea placeholder="Write your message here..."></textarea>
+                  <textarea id="message" placeholder="Write your message here..."></textarea>
                 </div>
               </div>
 
               <div class="row100">
                 <div class="inputBox">
-                  <input type="submit" value="Send" />
+                  <button onclick="SendMail()" type="submit" value="Send">SUBMIT</button>
                 </div>
               </div>
             </div>
@@ -169,6 +181,7 @@
         </div>
       </div>
     </div>
+
     <section class="footer">
       <p>
         © COPYRIGHT 2023. ALL RIGHTS RESERVED BY THE CYPRUS UNIVERSITY OF
@@ -206,7 +219,5 @@
       })
     </script>
 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="script.js"></script>
   </body>
 </html>
