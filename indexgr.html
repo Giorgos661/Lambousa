@@ -243,23 +243,30 @@
     </script>
     
     <script>
-        
-        document.addEventListener("DOMContentLoaded", function() {
-            const loadingScreen = document.getElementById("loading-screen");
-            const headerImage = new Image();
+            document.addEventListener("DOMContentLoaded", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        const headerImage = new Image();
 
-           
-            headerImage.src = "./img/5.png";
+        headerImage.src = "./img/5.png";
 
-           
-            headerImage.onload = function() {
+        headerImage.onload = function () {
+            // Add the fade-out class after the image is loaded
+            loadingScreen.classList.add("fade-out");
+
+            // Set a timeout to remove the loading screen after the transition
+            setTimeout(function () {
                 loadingScreen.style.display = "none";
-            };
-            
+            }, 500); // Adjust the timeout based on your transition duration
+        };
         });
     </script>
 
 <style>
+
+    #loading-screen.fade-out {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
     
     #loading-screen {
         position: fixed;
