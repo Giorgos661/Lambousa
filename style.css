@@ -811,6 +811,13 @@ ion-icon[name='logo-instagram']:hover {
   height: 100%;
 }
 
+.video-container {
+  width: 500px;
+  height: 281px;
+  margin-top: 200px;
+  margin-left: 260px;
+}
+
 /* Keyframes Animation*/
 @keyframes homeBgText {
   0%,
