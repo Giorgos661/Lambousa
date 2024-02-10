@@ -250,13 +250,12 @@
         headerImage.src = "./img/5.png";
 
         headerImage.onload = function () {
-            // Add the fade-out class after the image is loaded
+            
             loadingScreen.classList.add("fade-out");
 
-            // Set a timeout to remove the loading screen after the transition
             setTimeout(function () {
                 loadingScreen.style.display = "none";
-            }, 500); // Adjust the timeout based on your transition duration
+            }, 500); 
         };
         });
     </script>
