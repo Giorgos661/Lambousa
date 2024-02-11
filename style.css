@@ -813,10 +813,10 @@ ion-icon[name='logo-instagram']:hover {
 
 .video-container {
   position: relative;
-  margin-top: 10px;
+  top: 0px;
   width: 540px;
   height: 304px;
-  margin-left: 260px;
+  left: 30px;
 }
 
 #loading-screen.fade-out {
@@ -1075,4 +1075,8 @@ img:hover {
 
 .content {
   margin-top: 20px; /* Adjust the space above the content */
+}
+
+.content p {
+  margin-bottom: 50px; /* Adjust the space between paragraphs */
 }
