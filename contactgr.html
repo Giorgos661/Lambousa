@@ -7,17 +7,6 @@
     <title>Λάμπουσα</title>
     <link rel="stylesheet" href="style.css" />
     <link href="bootstrap.min.css" rel="stylesheet">
-    <script src="email.js"></script>
-    <script type="text/javascript"
-              src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-      </script>
-      <script type="text/javascript">
-        (function(){
-            emailjs.init({
-              publicKey: "taCHErBMvqj9n_qG8",
-            });
-        })();
-    </script>
   </head>
   <body class="contact-body">
     <!-- Navbar -->
@@ -72,13 +61,14 @@
       <div class="box">
         <div class="contact form">
           <h3>Επικοινωνήστε μαζί μας</h3>
-          <form method="post" action="send-email.php">
+          <form action="https://formsubmit.co/mnemosyne@cut.ac.cy" method="POST">
             <div class="formBox">
               <div class="row50">
                 <div class="inputBox">
                   <span>Ονοματεπώνυμο</span>
                   <input
                     type="text"
+                    name="Full Name"
                     required="required"
                     placeholder="Ονοματεπώνυμο"
                   />
@@ -86,9 +76,8 @@
                 <div class="inputBox">
                   <span>Θέμα</span>
                   <input
-                    type="text"
-                    id="subject"
-                    required="required"
+                    type="text" name="_subject"
+                    required
                     placeholder="Θέμα"
                   />
                 </div>
@@ -97,13 +86,13 @@
               <div class="row50">
                 <div class="inputBox">
                   <span>Ηλεκτρονική Διεύθυνση</span>
-                  <input type="text" required="required" placeholder="lambousa@gmail.com" />
+                  <input type="email" name="email" required placeholder="Ηλεκτρονική Διεύθυνση" />
                 </div>
                 <div class="inputBox">
                   <span>Κινητό</span>
                   <input
-                    type="text"
-                    id="mobile"
+                    type="number"
+                    name="mobile"
                     placeholder="+357 99335544"
                   />
                 </div>
@@ -112,13 +101,14 @@
               <div class="row100">
                 <div class="inputBox">
                   <span>Μήνυμα</span>
-                  <textarea placeholder="Γράψτε εδώ το μήνυμα σας..."></textarea>
+                  <textarea name="message" placeholder="Γράψτε εδώ το μήνυμα σας..."></textarea>
                 </div>
               </div>
 
               <div class="row100">
                 <div class="inputBox">
-                  <button onclick="SendMail()" type="submit" value="Send">ΥΠΟΒΟΛΗ</button>
+                  <button type="submit" value="Send">ΥΠΟΒΟΛΗ</button>
+                  <input type="hidden" name="_next" value="https://elambousa.eu/contactgr.html">
                 </div>
               </div>
             </div>

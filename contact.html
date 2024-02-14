@@ -72,39 +72,34 @@
       <div class="box">
         <div class="contact form">
           <h3>Send us a message</h3>
-          <form>
+          <form action="https://formsubmit.co/mnemosyne@cut.ac.cy" method="POST">
             <div class="formBox">
               <div class="row50">
                 <div class="inputBox">
                   <span>Full Name</span>
                   <input
                     type="text"
-                    id="fullName"
+                    name="Full Name"
                     required="required"
                     placeholder="Full Name"
                   />
                 </div>
                 <div class="inputBox">
                   <span>Subject</span>
-                  <input
-                    type="text"
-                    required="required"
-                    id="subject"
-                    placeholder="Subject"
-                  />
+                  <input type="text" name="_subject" placeholder="Subject">
                 </div>
               </div>
 
               <div class="row50">
                 <div class="inputBox">
                   <span>Email</span>
-                  <input type="text" id="email_id" required="required" placeholder="lambousa@gmail.com" />
+                  <input type="email" name="email" required="required" placeholder="Email" />
                 </div>
                 <div class="inputBox">
                   <span>Mobile</span>
                   <input
-                    type="text"
-                    id="mobile"
+                    type="number"
+                    name="mobile"
                     placeholder="+357 99335544"
                   />
                 </div>
@@ -113,13 +108,14 @@
               <div class="row100">
                 <div class="inputBox">
                   <span>Message</span>
-                  <textarea id="message" placeholder="Write your message here..."></textarea>
+                  <textarea name="message" placeholder="Write your message here..."></textarea>
                 </div>
               </div>
 
               <div class="row100">
                 <div class="inputBox">
-                  <button onclick="SendMail()" type="submit" value="Send">SUBMIT</button>
+                  <button type="submit" value="Send">SUBMIT</button>
+                  <input type="hidden" name="_next" value="https://elambousa.eu/contact.html">
                 </div>
               </div>
             </div>
@@ -218,6 +214,7 @@
         navLinks.classList.toggle('mobile-menu')
       })
     </script>
+    
 
   </body>
 </html>
