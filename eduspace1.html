@@ -65,6 +65,16 @@
 
     <div class="container-eduspace">
 
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Choose your age</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="eduspace1.html">3-6</a>
+          <a href="eduspace2.html">7-12</a>
+          <a href="eduspace3.html">13-17</a>
+          <a href="eduspace4.html">18+</a>
+        </div>
+      </div>
+
       <iframe src="https://app.Lumi.education/api/v1/run/OToGac/embed" width="1088" height="720" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
 
       <iframe src="https://app.Lumi.education/api/v1/run/6cTF2g/embed" width="1088" height="720" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe>
@@ -114,7 +124,25 @@
       })
     </script>
 
-<script src="script.js"></script>
+  <script>
+      function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 
 
   </body>

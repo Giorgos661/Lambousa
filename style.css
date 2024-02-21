@@ -435,12 +435,16 @@ section > div {
   margin-top: 46px;
 }
 
-.container-eduspace{
+.container-eduspace {
+  position: relative;
   max-width: 70%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 60px; /* Add space above the container */
+  padding-top: 10px; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in max-width calculation */
 }
 
 .container-mc {
@@ -449,6 +453,53 @@ section > div {
   padding-left: 15px;
   margin: 0 auto; 
 }
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 
 
 @media only screen and (max-width: 767px) {
@@ -1071,13 +1122,14 @@ img:hover {
 .gallery-body .flags {
   margin-top: 5px;
 }
+
 .image-container {
   text-align: center; /* Center the image */
   margin-bottom: 30px; /* Adjust the space below the image */
 }
 
 .title1 {
-  margin-top: 20px; /* Adjust the space above the title */
+  margin-bottom: 20px; /* Adjust the space above the title */
 }
 
 .content {
