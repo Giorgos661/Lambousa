@@ -536,7 +536,7 @@ section > div {
   display: grid;
   place-items: center;
   overflow: hidden;
-  transform: translateY(200px);
+  transform: translateY(140px);
   z-index: 1;
 }
 
@@ -646,7 +646,7 @@ ul li ul.dropdown li {
 }
 
 .gallery-section ul {
-  margin-top: 200px;
+  margin-top: 150px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
