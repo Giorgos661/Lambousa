@@ -21,7 +21,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top 10px;
-        color: #fff; /* Adjust text color for better visibility on the background */
       }
     </style>
     <!-- Navbar -->
@@ -123,19 +122,26 @@
 <style>
 
 .menu-box {
-  position: absolute;
-  top: 53%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Add a higher z-index */
+  }
+
+  .title1 {
+    position: relative; /* Add this line */
+    z-index: 1; /* Add this line */
+  }
 
 .menu-box h2 {
   text-align: center;
+  z-index: 1000;
 }
 
 .btn {
