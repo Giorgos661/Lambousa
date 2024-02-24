@@ -510,6 +510,11 @@ section > div {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #ddd;}
 
+.dropdown-content a.active {
+  background-color: rgba(0,0,0,0.2);
+  color: #2980B9;
+}
+
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
