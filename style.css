@@ -327,7 +327,7 @@ section > div {
 .service-item {
   position: relative;
   border-radius: 8px;
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.3);
 }
 
 .service-item .service-img {
@@ -1065,6 +1065,40 @@ ion-icon[name='logo-instagram']:hover {
   .contact {
     padding: 30px;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .header-content .credit {
+    font-size: 18px;
+  }
+
+  .header-content .text-animate {
+    max-width: 90%;
+    margin: 0 auto 15px;
+    text-align: center; /* Center the text content within the container */
+  }
+
+  .header-content p.animate__animated.animate__slideInRight {
+    max-width: 89%;
+    margin: 0 auto 20px;
+  }
+
+  .header-content .btn-box {
+    margin-top: 45px; /* Set margin-top to create space between the button and the next element */
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .header-content .credit {
+      font-size: 16px; /* Adjust font size for screens up to 480px width */
+  }
+  
+  .header-content .credit i.fa.fa-camera {
+    font-size: 16px; /* Adjust font size for screens up to 480px width */
+  }
+
+
 }
 
 .hidden {
