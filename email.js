@@ -5,9 +5,9 @@ const messageInput = document.querySelector('.message');
 const mobileInput = document.querySelector('.mobile'); 
 const subjectInput = document.querySelector('.subject');
 
-const serviceID = 'service_3ul39li';
-const templateID = 'template_f06a3ko';
-const publicKey = 'J8Ra8ABiJUZyXUS3_';
+const serviceID = 'service_iw67e3g';
+const templateID = 'template_y11hyba';
+const publicKey = 'taCHErBMvqj9n_qG8';
 
 emailjs.init(publicKey);
 
