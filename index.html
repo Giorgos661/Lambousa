@@ -12,38 +12,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-    <!-- <link href="animate/animate.min.css" rel="stylesheet"> -->
-    <!-- Your scripts go here -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var preloadImage = new Image();
-            preloadImage.src = './img/puzzlebg.png';
-
-            preloadImage.onload = function () {
-                // Image is loaded, you can update the body background here
-                document.body.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(\'./img/puzzlebg.png\')';
-            };
-        });
-    </script>
-    <style>
-        body {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center top 10px;
-        }
-
-        #hidden-preload {
-            display: none;
-        }
-    </style>
 
 </head>
 <body>
-
-    <div id="hidden-preload">
-        <img src="./img/puzzlebg.png" alt="Preload Image">
-    </div>
 
     <div id="loading-screen">
         <div id="loading-spinner"></div>
