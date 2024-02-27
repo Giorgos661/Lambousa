@@ -672,6 +672,13 @@ ul li ul.dropdown li {
   /* place-content: center; */
 }
 
+@media screen and (max-width: 768px) {
+  /* Set max-width to 90% when screen width is 768 pixels or less */
+  .gallery-section ul {
+    max-width: 90%;
+  }
+}
+
 .gallery-section ul li {
   list-style: none;
   padding: 8px 20px;
