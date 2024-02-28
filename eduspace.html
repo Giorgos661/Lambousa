@@ -18,6 +18,10 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center top 10px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
       }
 
       @media only screen and (max-width: 768px) {
@@ -91,7 +95,7 @@
       <a href="eduspace3.html" class="btn">13-17</a>
       <a href="eduspace4.html" class="btn">18+</a>
     </div>
-    <br>
+    <br><br><br>
 
     <div class="footer">
       <p>
@@ -133,18 +137,19 @@
 
 <style>
 
+
 .menu-box {
-    position: absolute;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 0; /* Add a higher z-index */
-  }
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 0; /* Add a higher z-index */
+}
 
   .title1 {
     position: relative; /* Add this line */
@@ -175,10 +180,6 @@
 .btn:hover {
   background-color: #3498db;
   color: #fff;
-}
-
-.footer{
-  margin-top: 520px;
 }
 
 /* Media Queries for Responsive Design */
