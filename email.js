@@ -6,7 +6,7 @@ const mobileInput = document.querySelector('.mobile');
 const subjectInput = document.querySelector('.subject');
 
 const serviceID = 'service_iw67e3g';
-const templateID = 'template_y11hyba';
+const templateID = 'template_4766ske';
 const publicKey = 'taCHErBMvqj9n_qG8';
 
 emailjs.init(publicKey);
