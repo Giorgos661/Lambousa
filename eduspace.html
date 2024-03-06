@@ -88,14 +88,15 @@
     </div>
     <br><br>
 
+    <div style="min-height: 400px; 
+    position: relative;">
     <div class="menu-box" id="menuBox">
       <h2>Choose your age</h2>
       <a href="eduspace1.html" class="btn">3-6</a>
       <a href="eduspace2.html" class="btn">7-12</a>
       <a href="eduspace3.html" class="btn">13-17</a>
       <a href="eduspace4.html" class="btn">18+</a>
-    </div>
-    <br><br><br>
+    </div></div>
 
     <div class="footer">
       <p>
@@ -137,10 +138,13 @@
 
 <style>
 
+.footer{
+  transform: translateY(90px);
+}
 
 .menu-box {
   position: absolute;
-  top: 53%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.2);
@@ -187,7 +191,7 @@
 @media only screen and (max-width: 768px) {
   .menu-box {
     width: 50%;
-    margin-top: -80px;
+    margin-top: -10px;
   }
 
   .menu-box h2 {
@@ -203,7 +207,7 @@
 
   .menu-box {
     width: 90%;
-    margin-top: -100px;
+    margin-top: -10px;
   }
 
   .menu-box h2 {
