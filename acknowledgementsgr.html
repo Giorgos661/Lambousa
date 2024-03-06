@@ -169,17 +169,28 @@
   /* Responsive design adjustments for tablets */
   @media (max-width: 767px) {
     .content-container {
-      max-width: 100%;
-    }
-  
-    .title1 h2 {
+    max-width: 80%;
+  }
+
+  .title1 h2 {
     font-size: 27px;
   }
-  
-    .content p {
-      font-size: 14px;
-    }
+
+  .content p {
+    font-size: 14px;
   }
+
+  .flex-container {
+    flex-direction: column;
+    align-items: justify;
+  }
+
+  .links {
+    margin-left: 0;
+    margin-top: 20px; /* Adjusted margin for smaller screens */
+    text-align: center;
+  }
+}
   
   /* Further adjustments for very small screens (phones) */
   @media (max-width: 480px) {
