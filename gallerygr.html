@@ -2232,6 +2232,16 @@
       crossorigin="anonymous"
     ></script>
 
+    <script>
+      // Add loading="lazy" to all images on the page
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll("img");
+        images.forEach((img) => {
+          img.setAttribute("loading", "lazy");
+        });
+      });
+    </script>
+
     <script type="text/javascript">
       $(document).ready(function () {
         $('.list').click(function () {
