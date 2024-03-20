@@ -892,14 +892,6 @@ ion-icon[name='logo-instagram']:hover {
   height: 100%;
 }
 
-.video-container {
-  position: relative;
-  top: 0px;
-  width: 540px;
-  height: 304px;
-  left: 30px;
-}
-
 #loading-screen.fade-out {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
