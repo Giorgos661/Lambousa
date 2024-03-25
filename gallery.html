@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="lightbox.css" />
     <link href="bootstrap.min.css" rel="stylesheet">
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+          const images = document.querySelectorAll('img');
+          images.forEach(img => {
+              img.setAttribute('loading', 'lazy');
+          });
+      });
+      </script>
   </head>
   <body class="gallery-body">
     <!-- Navbar -->
@@ -1242,7 +1250,7 @@
             href="./img/photos/CYLHA.06.005.001 (62).JPG"
             class="photo oldport"
           >
-            <img src="./img/photos/CYLHA.06.005.001 (62).JPG" />
+            <img src="./img/photos/CYLHA.06.005.001 (62).JPG" loading="lazy"/>
           </a>
           <a href="./img/photos/1.jpg" class="photo molos">
             <img src="./img/photos/1.jpg" />
