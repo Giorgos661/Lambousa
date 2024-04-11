@@ -182,7 +182,7 @@ header {
 
 .header-content .credit{
   position: absolute;
-  bottom: 0;
+  bottom: -12px;
   right: 30px;
   font-style: italic;
   color: #EDEADE;
