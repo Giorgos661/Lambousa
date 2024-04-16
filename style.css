@@ -12,6 +12,10 @@
   --blue: #064273;
 }
 
+.header .navbar .active-page {
+  color: #12beff;
+}
+
 .logo {
   box-sizing: border-box;
   max-height: 65px;
@@ -42,92 +46,6 @@ html {
   overflow-x: hidden;
 }
 
-.nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #1f618d;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-}
-
-.navbar {
-  /* Index Navbar */
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  background-color: transparent; /* Set the initial background as transparent */
-  transition: background-color 0.3s ease-in-out;
-}
-
-.scrolled {
-  background-color: #1f618d; /* Background color when the page is scrolled */
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-
-.nav-links li {
-  margin: 0px 30px;
-  color: #12beff;
-}
-
-.navbar .nav-links a {
-  color: #fff;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.navbar .nav-links a:hover,
-.navbar .nav-links a.active {
-  color: var(--main-color);
-}
-
-.nav .nav-links a {
-  color: #fff;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav .nav-links a:hover,
-.nav .nav-links a.active {
-  color: var(--main-color);
-}
-
-.nav-links .nav-link {
-  margin: 0px 0px;
-  color: #12beff;
-  text-decoration: none;
-}
-
-.flags {
-  min-height: 27px;
-}
-
-.flags img {
-  width: 25px;
-  height: 20px;
-}
-
-.flags ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.flags li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
 .menu-btn {
   position: absolute;
   top: 30px;
@@ -137,7 +55,42 @@ html {
   display: none;
 }
 
-header {
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: #1f618d;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.navbar a{
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+
+#check {
+  display: none;
+}
+
+.head{
   width: 100vw;
   min-height: 100vh;
   background: -webkit-gradient(
@@ -147,11 +100,11 @@ header {
       from(rgba(0, 0, 0, 0.4)),
       to(rgba(0, 0, 0, 0.4))
     ),
-    url(./img/5.png) center/cover no-repeat;
+    url(./img/photos/6-lambousa.jpg) center/cover no-repeat;
   background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(./img/5.png) center/cover no-repeat;
+    url(./img/photos/6-lambousa.jpg) center/cover no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(./img/5.png) center/cover no-repeat;
+    url(./img/photos/6-lambousa.jpg) center/cover no-repeat;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -170,6 +123,15 @@ header {
 .header-content h1 {
   font-size: 4vmin;
   /* margin-top: 100px;*/
+}
+
+.icons{
+  position: absolute;
+  right: 5%;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
 }
 
 .line {
@@ -465,7 +427,7 @@ section > div {
   margin: 0 auto; 
 }
 
-/* Dropdown Button */
+/* Dropdown Button 
 .dropbtn {
   background-color: #3498DB;
   color: white;
@@ -475,47 +437,40 @@ section > div {
   cursor: pointer;
 }
 
-/* Dropdown button on hover & focus */
+
 .dropbtn:hover, .dropbtn:focus {
   background-color: #2980B9;
-}
+} */
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
-  top: 0;
-  right: 0;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown-content a.active {
-  background-color: rgba(0,0,0,0.2);
-  color: #12beff;
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #1f618d !important; /* Set the background color */
 }
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.dropdown-menu a {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space evenly */
+  color: white; /* Text color for dropdown items */
+  padding: 10px 20px; /* Adjust padding */
+}
+
+/* Add space between dropdown menu items */
+.dropdown-menu a + a {
+  margin-top: 5px; /* Adjust the space between items */
+}
 
 
 @media only screen and (max-width: 767px) {
@@ -917,6 +872,69 @@ ion-icon[name='logo-instagram']:hover {
   width: 50px;
   height: 50px;
   animation: spin 1s linear infinite;
+}
+
+.nav .nav-links a:hover,
+.nav .nav-links a.active {
+  color: var(--main-color);
+}
+
+/* BREAKPOINTS */
+@media (max-width: 992px){
+  .header{
+    padding: 1.3rem 5%;
+  }
+}
+
+@media (max-width: 768px){
+  .icons {
+    display: inline-flex;
+  }
+
+  #check:checked ~ .icons #menu-icon {
+    display: none;
+  }
+
+  .icons #close-icon {
+    display: none;
+  }
+
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0,0,0, .1);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
+    overflow: hidden;
+    transition: .3s ease;
+  }
+
+  #check:checked ~ .navbar {
+    height: 26rem;
+  }
+
+  .navbar a{
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: .3s ease;
+  }
+
+  #check:checked ~ .navbar a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(.15s * var(--i));
+  }
 }
 
 @keyframes spin {

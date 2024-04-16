@@ -41,47 +41,42 @@
   
   <body>
     <!-- Navbar -->
-    <nav class="nav">
+    <header class="header">
       <a href="index.html" class="logo">
-        <img src="./img/anchor.png" />
-
+          <img src="./img/anchor.png">
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="underconstruction/underconstruction.html" class="nav-link">E-Book</a></li>
-        <li class="dropdown">
-          <a href="#" class="nav-link">Edugames ▼</a>
-          <ul class="dropdown">
-              <li><a href="underconstruction/underconstruction.html" class="nav-link">E-Trawler Lab</a></li>
-              <li><a href="eduspace.html" class="nav-link active">Eduspace</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="nav-link">Gallery ▼</a>
-          <ul class="dropdown">
-              <li><a href="gallery.html" class="nav-link">Photo Gallery</a></li>
-              <li><a href="interviews.html" class="nav-link">Interviews</a></li>
-          </ul>
-        </li>
-        <li><a href="acknowledgements.html" class="nav-link">Acknowledgements</a></li>
-        <li><a href="contact.html" class="nav-link">Contact</a></li>
-        <div class="flags">
-          <ul>
-            <li>
-              <a href="eduspace.html" class="nav-link"
-                ><img src="./img/Greece.png"
-              /></a>
-            </li>
-            <li>
-              <a href="eduspace.html" class="nav-link"
-                ><img src="./img/Uk.png"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </ul>
-      <img src="./img/menu-btn.png" alt="menu" class="menu-btn" />
-    </nav>
+  
+      <input type="checkbox" id="check">
+      <label for="check" class="icons">
+          <i class='bx bx-menu' id="menu-icon"></i>
+          <i class='bx bx-x' id="close-icon"></i>
+      </label>
+  
+      <nav class="navbar transparent">
+          <a href="index.html" style="--i:0;">Home</a>
+          <a href="#" style="--i:1;">Ebook</a>
+          <div class="dropdown">
+              <a href="#" class="dropdown-toggle" style="--i:2;">Edugames</a>
+              <div class="dropdown-menu">
+                  <a href="underconstruction/underconstruction.html">3D Puzzle</a>
+                  <a href="eduspace.html" class="active-page">Eduspace</a>
+              </div>
+          </div>
+          <div class="dropdown" style="--i:3;">
+              <a href="#" class="dropdown-toggle">Gallery</a>
+              <div class="dropdown-menu">
+                  <a href="gallery.html">Photos</a>
+                  <a href="interviews.html">Interviews</a>
+                  <a href="videos.html">Videos</a>
+              </div>
+          </div>
+          <a href="acknowledgements.html" style="--i:4;">Acknowledgements</a>
+          <a href="contact.html" style="--i:5;">Contact</a>
+  
+          <a href="indexgr.html" style="margin-right: 1px;"><img src="./img/Greece.png" style="width: 24px; height: 20px;"></a>
+          <a href="index.html"><img src="./img/Uk.png" style="width: 24px; height: 20px;"></a>
+      </nav>
+  </header>
 
     <div class="title1">
         <h2>Eduspace</h2>
