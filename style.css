@@ -462,13 +462,9 @@ section > div {
 .dropdown-menu a {
   display: flex;
   align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  justify-content: space-between; /* Space evenly */
   color: white; /* Text color for dropdown items */
   padding: 10px 20px; /* Adjust padding */
-}
-
-.dropdown-menu a:hover {
-  background-color: #154360; /* Background color for hovered dropdown item */
 }
 
 /* Add space between dropdown menu items */
