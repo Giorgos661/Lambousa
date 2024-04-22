@@ -34,7 +34,7 @@
               </div>
           </div>
           <div class="dropdown" style="--i:3;">
-              <a href="#" class="dropdown-toggle" class="active-page">Γκαλερί</a>
+              <a href="#" class="dropdown-toggle">Γκαλερί</a>
               <div class="dropdown-menu">
                   <a href="gallerygr.html" class="active-page">Φωτογραφίες</a>
                   <a href="interviewsgr.html">Συνεντεύξεις</a>
@@ -2119,6 +2119,13 @@
         // })
 
         $('.list[data-filter="all"]').click()
+
+        // $('[data-lightbox]').click(function () {
+          setInterval(() => {
+          $('#lightboxOverlay').css('height', $('body').height() + 'px')
+          console.log($('body').height() + 'px')
+        }, 1000)
+        // })
       })
     </script>
 
