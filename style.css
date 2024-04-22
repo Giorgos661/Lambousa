@@ -29,7 +29,7 @@
   left: 70px;
   width: 65px;
   height: 65px;
-} 
+}
 ul {
   list-style: none;
 }
@@ -77,19 +77,22 @@ html {
   z-index: -1;
 }
 
-.navbar a{
+.navbar a {
   font-size: 1rem;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  margin-left: 2.5rem;
+}
+
+.navbar > * {
+  margin-left: 3rem;
 }
 
 #check {
   display: none;
 }
 
-.head{
+.head {
   width: 100vw;
   min-height: 100vh;
   background: -webkit-gradient(
@@ -124,7 +127,7 @@ html {
   /* margin-top: 100px;*/
 }
 
-.icons{
+.icons {
   position: absolute;
   right: 5%;
   font-size: 2.8rem;
@@ -141,16 +144,16 @@ html {
   border-radius: 5px;
 }
 
-.header-content .credit{
+.header-content .credit {
   position: absolute;
   bottom: -12px;
   right: 30px;
   font-style: italic;
-  color: #EDEADE;
+  color: #edeade;
 }
 
 .credit i.fa-camera {
-  margin-left: 5px; 
+  margin-left: 5px;
 }
 
 .header-content h1 {
@@ -423,10 +426,10 @@ section > div {
   max-width: 60%;
   padding-right: 15px;
   padding-left: 15px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
-/* Dropdown Button 
+/* Dropdown Button */
 .dropbtn {
   background-color: #3498DB;
   color: white;
@@ -436,10 +439,37 @@ section > div {
   cursor: pointer;
 }
 
-
+/* Dropdown button on hover & focus */
 .dropbtn:hover, .dropbtn:focus {
   background-color: #2980B9;
-} */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #2980B9;}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -461,7 +491,8 @@ section > div {
 
 .dropdown-menu a {
   display: block;
-  align-items: justify;
+  /* align-items: justify; */
+  text-align: center;
   color: white;
   padding: 10px 20px;
   width: 100%;
@@ -592,7 +623,7 @@ ul li ul.dropdown li a {
   color: #fff;
   text-align: center;
   text-decoration: none;
-  padding: 12px 20px; 
+  padding: 12px 20px;
 }
 
 ul li ul.dropdown {
@@ -820,13 +851,12 @@ ion-icon[name='logo-facebook']:hover {
 .fa-brands.fa-x-twitter {
   color: white;
   transition: color 0.3s ease; /* Add transition for smooth effect */
-  transform: translateY(-3.5px); 
+  transform: translateY(-3.5px);
 }
 
 .fa-brands.fa-x-twitter:hover {
   color: #000000; /* Set the desired hover color */
 }
-
 
 ion-icon[name='logo-youtube']:hover {
   color: #ff0000;
@@ -856,7 +886,7 @@ ion-icon[name='logo-instagram']:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #fff; 
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -864,8 +894,8 @@ ion-icon[name='logo-instagram']:hover {
 }
 
 #loading-spinner {
-  border: 8px solid #f3f3f3; 
-  border-top: 8px solid #3498db; 
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -878,13 +908,13 @@ ion-icon[name='logo-instagram']:hover {
 }
 
 /* BREAKPOINTS */
-@media (max-width: 992px){
-  .header{
+@media (max-width: 992px) {
+  .header {
     padding: 1.3rem 5%;
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .icons {
     display: inline-flex;
   }
@@ -907,37 +937,56 @@ ion-icon[name='logo-instagram']:hover {
     left: 0;
     width: 100%;
     height: 0;
-    background: rgba(0,0,0, .15);
+    background: rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(20px);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0, .3);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    transition: .3s ease;
+    transition: 0.3s ease;
   }
 
   #check:checked ~ .navbar {
     height: 26rem;
   }
 
-  .navbar a{
+  .navbar a {
     display: block;
     font-size: 1.1rem;
     margin: 1.5rem 0;
     text-align: center;
     transform: translateY(-50px);
     opacity: 0;
-    transition: .3s ease;
+    transition: 0.3s ease;
+  }
+
+  .navbar .dropdown {
+    display: block;
+    margin-left: initial;
+  }
+
+  .navbar .dropdown > .dropdown-menu {
+    max-width: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .navbar .dropdown > .dropdown-menu > a {
+    margin: initial;
   }
 
   #check:checked ~ .navbar a {
     transform: translateY(0);
     opacity: 1;
-    transition-delay: calc(.15s * var(--i));
+    transition-delay: calc(0.15s * var(--i));
   }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Keyframes Animation*/
@@ -984,7 +1033,7 @@ ion-icon[name='logo-instagram']:hover {
   .nav {
     padding: 0;
   }
-  
+
   .nav-links {
     flex-direction: column;
     width: 100%;
@@ -1097,12 +1146,11 @@ ion-icon[name='logo-instagram']:hover {
   }
 }
 
-
 @media screen and (max-width: 480px) {
   .header-content .credit {
-      font-size: 13px; /* Adjust font size for screens up to 480px width */
+    font-size: 13px; /* Adjust font size for screens up to 480px width */
   }
-  
+
   .header-content .credit i.fa.fa-camera {
     font-size: 13px; /* Adjust font size for screens up to 480px width */
   }
