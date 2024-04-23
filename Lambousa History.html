@@ -56,7 +56,9 @@
       </nav>
     </header>
 
-    <div class="image-container"></div>
+    <div class="image-container-outer">
+      <div class="image-container"></div>
+    </div>
 
     <br /><br />
 
@@ -199,13 +201,18 @@
     margin: 0 auto; /* Center the container */
   }
 
+  .image-container-outer {
+    width: 100%; /* Make the image responsive */
+    height: 500px; /* Maintain the aspect ratio */
+  }
   .image-container {
     width: 100%; /* Make the image responsive */
-    height: 580px; /* Maintain the aspect ratio */
-    background-position: center -400px;
+    height: 100%; /* Maintain the aspect ratio */
+    background-position: center -61vh;
     background-size: cover;
     background-attachment: fixed;
     background-image: url('./img/photos/CYLHA.06.005.001 (62).JPG');
+    background-repeat: no-repeat;
     pointer-events: none;
   }
 
@@ -232,14 +239,88 @@
     }
   }
 
-  /* Responsive design adjustments for tablets */
-  @media (max-width: 768px) {
+  @media (min-width: 992px) and (max-width: 1080px){
+  .image-container-outer {
+    width: 100%; /* Make the image responsive */
+    height: 500px; /* Maintain the aspect ratio */
+  }
+  .image-container {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Maintain the aspect ratio */
+    background-position: center -170px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('./img/photos/CYLHA.06.005.001 (62).JPG');
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
     .content-container {
-      max-width: 100%; /* Full width on smaller screens */
+      max-width: 90%; /* Full width on smaller screens */
+      margin: -20px auto; /* Center the container */
     }
 
     .title1 h2 {
-      font-size: 24px; /* Smaller font size for smaller screens */
+      font-size: 20px; /* Smaller font size for smaller screens */
+    }
+
+    .content p {
+      font-size: 14px; /* Smaller font size for paragraphs on smaller screens */
+    }
+  }
+
+  @media (max-width: 991px) {
+  .image-container-outer {
+    width: 100%; /* Make the image responsive */
+    height: 500px; /* Maintain the aspect ratio */
+  }
+  .image-container {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Maintain the aspect ratio */
+    background-position: center -170px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('./img/photos/CYLHA.06.005.001 (62).JPG');
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+    .content-container {
+      max-width: 90%; /* Full width on smaller screens */
+      margin: -20px auto; /* Center the container */
+    }
+
+    .title1 h2 {
+      font-size: 20px; /* Smaller font size for smaller screens */
+    }
+
+    .content p {
+      font-size: 14px; /* Smaller font size for paragraphs on smaller screens */
+    }
+  }
+
+  /* Responsive design adjustments for tablets */
+  @media (max-width: 768px) {
+    .content-container {
+    max-width: 90%; /* Adjust this to match your image's width */
+    margin: -20px auto; /* Center the container */
+    }
+  .image-container-outer {
+    width: 100%; /* Make the image responsive */
+    height: 500px; /* Maintain the aspect ratio */
+  }
+  .image-container {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Maintain the aspect ratio */
+    background-position: center -120px;
+    background-position: right -120px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('./img/photos/CYLHA.06.005.001 (62).JPG');
+    background-repeat: no-repeat;
+    pointer-events: none;
+    }
+
+    .title1 h2 {
+      font-size: 20px; /* Smaller font size for smaller screens */
     }
 
     .content p {
@@ -249,8 +330,25 @@
 
   /* Further adjustments for very small screens (phones) */
   @media (max-width: 480px) {
+    .image-container-outer {
+    width: 100%; /* Make the image responsive */
+    height: 500px; /* Maintain the aspect ratio */
+    }
+    .image-container {
+    width: 100%; /* Make the image responsive */
+    height: 90%; /* Maintain the aspect ratio */
+    background-position: center -200px;
+    background-position: right -200px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('./img/photos/CYLHA.06.005.001 (62).JPG');
+    background-repeat: no-repeat;
+    pointer-events: none;
+    }
+
     .content-container {
       max-width: 90%; /* Full width on very small screens */
+      margin: -50px auto;
     }
 
     .image-container img {
