@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="lightbox.css" />
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      .slide-track img,
+      .gallery img {
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+      }
+
+      .slide-track img.loaded,
+      .gallery img.loaded {
+        opacity: 1;
+      }
+    </style>
   </head>
   <body class="gallery-body">
     <!-- Navbar -->
