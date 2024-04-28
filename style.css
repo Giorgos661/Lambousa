@@ -93,6 +93,7 @@ html {
 }
 
 .head {
+  position: relative;
   width: 100vw;
   min-height: 100vh;
   background: -webkit-gradient(
@@ -115,6 +116,7 @@ html {
   align-items: center;
   justify-content: center;
 }
+
 
 .header-content {
   margin-bottom: 150px;

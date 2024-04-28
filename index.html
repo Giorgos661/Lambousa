@@ -42,6 +42,23 @@
     height: 100%;
     z-index: -1;
     }
+
+    .dimos-img {
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    bottom: 50px; /* adjust as needed */
+    left: calc(50% - 60px);
+    }
+
+    @media screen and (max-width: 768px) {
+    .dimos-img {
+    width: 100px;
+    height: 100px; /* Adjust the max-width for smaller screens */
+    position: absolute;
+    left: calc(50% - 50px);
+    }
+    }
     </style>
 </head>
 <body>
@@ -107,8 +124,11 @@
             </p>
             <div class="btn-box">
                 <a href="#middle" class="btn animate__animated animate__slideInRight">Read More</a>
-            </div> 
+            </div>              
         </div>
+        <a href="https://www.limassol.org.cy/en/home">
+            <img src="./img/Dimos(EN).png" class="dimos-img animate__animated animate__slideInRight">
+        </a> 
         <div id="middle"></div>
     </div>
 
