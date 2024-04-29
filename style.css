@@ -982,6 +982,19 @@ ion-icon[name='logo-instagram']:hover {
   }
 }
 
+@media (max-width: 376px){
+  .header-content h1 {
+    font-size: 41px;
+  }
+  .header-content .text-animate h3 {
+    font-size: 27px;
+  }
+  .header-content p {
+    font-size: 16px;
+  }
+
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -1128,10 +1141,6 @@ ion-icon[name='logo-instagram']:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .header-content .credit {
-    font-size: 18px;
-  }
-
   .header-content .text-animate {
     max-width: 90%;
     margin: 0 auto 15px;
@@ -1145,16 +1154,6 @@ ion-icon[name='logo-instagram']:hover {
 
   .header-content .btn-box {
     margin-top: 45px; /* Set margin-top to create space between the button and the next element */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .header-content .credit {
-    font-size: 13px; /* Adjust font size for screens up to 480px width */
-  }
-
-  .header-content .credit i.fa.fa-camera {
-    font-size: 13px; /* Adjust font size for screens up to 480px width */
   }
 }
 
