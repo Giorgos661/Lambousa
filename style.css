@@ -85,7 +85,7 @@ html {
 }
 
 .navbar > * {
-  margin-left: 3rem;
+  margin-left: 2.7rem;
 }
 
 #check {
@@ -947,7 +947,7 @@ ion-icon[name='logo-instagram']:hover {
   }
 
   #check:checked ~ .navbar {
-    height: 26rem;
+    height: 29rem; /*height of responsive navbar*/
   }
 
   .navbar a {
@@ -991,6 +991,9 @@ ion-icon[name='logo-instagram']:hover {
   }
   .header-content p {
     font-size: 16px;
+  }
+  .dimos-img {
+    bottom: 60px;
   }
 
 }
