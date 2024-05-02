@@ -11,58 +11,86 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <script type="module" src="./three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <link rel="stylesheet" href="style.css" />
     <style>
-        body {
+      body {
         display: flex;
         flex-direction: column;
         min-height: 100vh; /* Minimum height of the viewport */
+      }
+
+      .content {
+        margin-top: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 400px;
+        gap: 32px;
+      }
+
+      .screen {
+        width: 47.5%;
+        height: 100%;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      @media screen and (max-width: 768px) {
+        .content {
+          flex-direction: column;
+          row-gap: 24px;
         }
+
+        .screen {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body class="contact-body">
     <!-- Navbar -->
     <header class="header">
       <a href="#top" class="logo">
-          <img src="./img/anchor.png">
+        <img src="./img/anchor.png" />
       </a>
-  
-      <input type="checkbox" id="check">
+
+      <input type="checkbox" id="check" />
       <label for="check" class="icons">
-          <i class='bx bx-menu' id="menu-icon"></i>
-          <i class='bx bx-x' id="close-icon"></i>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
       </label>
-  
+
       <nav class="navbar transparent">
-          <a href="index.html" style="--i:0;">Home</a>
-          <a href="#" style="--i:1;">Ebook</a>
-          <div class="dropdown">
-              <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
-              <div class="dropdown-menu">
-                  <a href="3Dviewer.html" class="active-page">3D Model</a>
-                  <a href="./app-files/index.html" target="_blank">360 Virtual Tour</a>
-              </div>
+        <a href="index.html" style="--i: 0">Home</a>
+        <a href="#" style="--i: 1">Ebook</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle" style="--i: 2"
+            >Virtual Interaction</a
+          >
+          <div class="dropdown-menu">
+            <a href="3Dviewer.html" class="active-page">3D Model</a>
+            <a href="./app-files/index.html" target="_blank"
+              >360 Virtual Tour</a
+            >
           </div>
-          <div class="dropdown">
-              <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
-              <div class="dropdown-menu">
-                  <a href="underconstruction/underconstruction.html">3D Puzzle</a>
-                  <a href="eduspace.html">Eduspace</a>
-              </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle" style="--i: 3">Edugames</a>
+          <div class="dropdown-menu">
+            <a href="underconstruction/underconstruction.html">3D Puzzle</a>
+            <a href="eduspace.html">Eduspace</a>
           </div>
-          <div class="dropdown">
-              <a href="#" class="dropdown-toggle" style="--i:4;">Gallery</a>
-              <div class="dropdown-menu">
-                  <a href="gallery.html">Photos</a>
-                  <a href="interviews.html">Interviews</a>
-                  <a href="videos.html">Videos</a>
-              </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle" style="--i: 4">Gallery</a>
+          <div class="dropdown-menu">
+            <a href="gallery.html">Photos</a>
+            <a href="interviews.html">Interviews</a>
+            <a href="videos.html">Videos</a>
           </div>
-          <a href="acknowledgements.html" style="--i:5;">Acknowledgements</a>
-          <a href="contact.html" style="--i:6;">Contact</a>
+        </div>
+        <a href="acknowledgements.html" style="--i: 5">Acknowledgements</a>
+        <a href="contact.html" style="--i: 6">Contact</a>
 
         <a href="3Dviewergr.html" style="margin-right: 1px"
           ><img src="./img/Greece.png" style="width: 24px; height: 20px"
@@ -73,18 +101,25 @@
       </nav>
     </header>
 
-    <div class="content">
-        <script src="three.min.js"></script>
+    <div class="content container">
+      <div class="screen screen-one">
+        <!-- <script src="./three.min.js"></script> -->
       </div>
-  
-      <script
-        type="module"
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-      ></script>
-      <script
-        nomodule
-        src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-      ></script>
+      <div class="screen screen-two">
+        <!-- <script src="./three.js"></script> -->
+      </div>
+    </div>
 
-  </body>      
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- <script type="module" src="./lambousa.js"></script>
+    <script type="module" src="./lambousa-2.js"></script> -->
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

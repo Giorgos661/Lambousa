@@ -42,7 +42,7 @@ window.onload = function() {
     };
 
     const loader = new THREE.GLTFLoader(loadingManager).setPath('');
-    loader.load('lambousa.glb', (gltf) => {
+    loader.load('lambousa (2).glb', (gltf) => {
         const mesh = gltf.scene;
         mesh.traverse((child) => {
             if (child.isMesh) {
