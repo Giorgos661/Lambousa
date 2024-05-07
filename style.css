@@ -117,23 +117,6 @@ html {
   justify-content: center;
 }
 
-
-.btn-box,
-.dimos-img {
-  margin-bottom: 20px; /* Equal spacing between elements */
-}
-
-@media screen and (max-width: 768px) {
-  .header-content,
-  .text-animate,
-  .btn-box,
-  .dimos-img {
-    margin-bottom: 10px; /* Adjusted spacing for smaller screens */
-  }
-}
-
-
-
 .header-content {
   margin-bottom: 150px;
   color: whitesmoke;
