@@ -478,7 +478,7 @@ section > div {
   display: inline-block;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover > .dropdown-menu {
   display: block;
 }
 
@@ -488,19 +488,32 @@ section > div {
   z-index: 1;
   background-color: #1f618d !important;
   width: 100%;
+  left: 0; /* Ensures alignment to the left edge of the parent */
 }
 
-.dropdown-menu a {
+/* Apply styles uniformly to all anchors, including toggles */
+.dropdown-menu a, .dropdown-menu .dropdown-toggle {
   display: block;
-  /* align-items: justify; */
   text-align: center;
   color: white;
   padding: 10px 20px;
   width: 100%;
+  cursor: pointer; /* Add cursor style for better user feedback */
 }
 
-.dropdown-menu a + a {
+.dropdown-menu a + a, .dropdown-menu .dropdown-toggle + a {
   margin-top: 5px;
+}
+
+/* Nested dropdown positioning */
+.dropdown .dropdown-menu .dropdown {
+  position: relative;
+}
+
+.dropdown .dropdown-menu .dropdown:hover > .dropdown-menu {
+  display: block;
+  top: 0; /* Aligns the dropdown top with its parent */
+  left: 100%; /* Positions it to the right of its parent */
 }
 
 @media only screen and (max-width: 767px) {
