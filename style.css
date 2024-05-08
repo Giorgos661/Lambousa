@@ -1172,17 +1172,29 @@ ion-icon[name='logo-instagram']:hover {
   }
 }
 
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .models-dropdown > .dropdown-toggle {
+  width: calc(100% + 24px);
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+  .models-dropdown > .dropdown-menu {
+  transform: translateX(-10%) !important;
+  }
+  }
+
 .hidden {
   opacity: 0;
   filter: blur(5px);
   transform: translateX(-100%);
   transition: all 1s;
-}
-
-@media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
 }
 
 .show {

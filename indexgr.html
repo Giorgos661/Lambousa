@@ -59,7 +59,18 @@
     left: calc(50% - 50px);
     }
     }
-    
+
+    @media screen and (min-width: 769px) {
+    .models-dropdown > .dropdown-toggle {
+    width: calc(100% + 24px);
+    }
+    }
+
+    @media screen and (max-width: 768px) {
+    .models-dropdown > .dropdown-menu {
+    transform: translateX(-10%) !important;
+    }
+    }
     </style>
 </head>
 <body>
@@ -87,7 +98,7 @@
                 <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
                 <div class="dropdown-menu">
                     <!-- The 3D Models dropdown -->
-                    <div class="dropdown">
+                    <div class="dropdown models-dropdown">
                         <a href="#" class="dropdown-toggle">3D Μοντέλα</a>
                         <div class="dropdown-menu">
                             <a href="3Dviewer.html">Συνολικό Μοντέλο</a>
