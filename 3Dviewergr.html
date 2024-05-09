@@ -11,7 +11,6 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
     <style>
       body {
         display: flex;
@@ -81,11 +80,18 @@
           <a href="indexgr.html" style="--i:0;">Αρχική</a>
           <a href="ebookgr.html" target="_blank" style="--i:1;">Ebook</a>
           <div class="dropdown">
-              <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
-              <div class="dropdown-menu">
-                  <a href="3Dviewergr.html">3D Models</a>
-                  <a href="./app-files/index.html" target="_blank">360 Virtual Tour</a>
-              </div>
+            <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
+            <div class="dropdown-menu">
+                <!-- The 3D Models dropdown -->
+                <div class="dropdown models-dropdown">
+                    <a href="#" class="dropdown-toggle">3D Μοντέλα</a>
+                    <div class="dropdown-menu">
+                        <a href="3Dviewergr.html">Συνολικό Μοντέλο</a>
+                        <a href="3Dviewergr(1).html">Δομικό Μοντέλο</a>
+                    </div>
+                </div>
+                <a href="./app-files/index.html" target="_blank">360 Virtual Tour</a>
+            </div>
           </div>
           <div class="dropdown">
               <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
@@ -100,6 +106,7 @@
                   <a href="gallerygr.html">Φωτογραφίες</a>
                   <a href="interviewsgr.html">Συνεντεύξεις</a>
                   <a href="videosgr.html">Βίντεο</a>
+                  <a href="drawingsgr.html">Σχέδια</a>
               </div>
           </div>
           <a href="acknowledgementsgr.html" style="--i:5;">Ευχαριστίες</a>
