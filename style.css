@@ -59,7 +59,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.3rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -924,7 +924,7 @@ ion-icon[name='logo-instagram']:hover {
 /* BREAKPOINTS */
 @media (max-width: 992px) {
   .header {
-    padding: 1.3rem 5%;
+    padding: 1rem 5%;
   }
 }
 
