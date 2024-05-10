@@ -50,6 +50,20 @@
     left: calc(50% - 60px);
     }
 
+    .video {
+    margin-top: 150px; /* Adjust the value as needed */
+    }
+
+    .video-container {
+    display: flex;
+    justify-content: center;
+    }
+
+    .video-container video {
+    max-width: 100%; /* Ensure the video doesn't overflow its container */
+    height: 690;
+    }
+
     @media screen and (max-width: 768px) {
     .dimos-img {
     width: 100px;
@@ -202,6 +216,18 @@
                 </div>
             </div>
             </div>
+
+            <div class="video">
+                <div class="title">
+                    <h1 class="animate__animated animate__slideInUp">Fishing with Lambousa in 1966</h1>
+                    <div class="line"></div>
+                </div>
+                <br><br>
+                <div class="video-container">
+                    <video controls src="lambousa.mp4" width="1400" height="690"></video>
+                    <source src="lambousa.mp4">
+                </div>
+            </div>
             
             <div class="home-gallery container-xxl py-5 px-0">
                 <div class="row g-0">
@@ -267,8 +293,6 @@
                     </div>
                 </div>
             </div>
-            
-
         </div>
     </section>
 
