@@ -145,18 +145,6 @@ html {
   border-radius: 5px;
 }
 
-.header-content .credit {
-  position: absolute;
-  bottom: -12px;
-  right: 30px;
-  font-style: italic;
-  color: #edeade;
-}
-
-.credit i.fa-camera {
-  margin-left: 5px;
-}
-
 .header-content h1 {
   margin-top: 100px;
   font-size: 56px;
