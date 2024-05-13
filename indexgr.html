@@ -15,122 +15,125 @@
     <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <style>
-    .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    background-color: transparent; /* Initial background color */
-    transition: background-color 0.3s ease; /* Transition effect */
-    }
-
-    .header.scrolled {
-    background-color: #1f618d; /* Background color when scrolled */
-    }
-
-    .header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    }
-
-    .dimos-img {
-    width: 125px;
-    position: absolute;
-    margin-top: 45px;
-    left: calc(50% - 60px);
-    }
-
-    .video {
-    margin-top: 150px; /* Adjust the value as needed */
-    }
-
-    .video-container {
-    display: flex;
-    justify-content: center;
-    }
-
-    .video-container video {
-    max-width: 100%; /* Ensure the video doesn't overflow its container */
-    height: 690;
-    }
-
-    .complexity {
-    margin-top: 100px;
-    }
-
-    .service-img, .complexity .img {
-    display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    width: 100%; /* Ensures the container takes full width */
-    }
-
-    .service-img img, .complexity img {
-    margin: auto; /* Additional centering for images specifically if flex doesn't fully apply due to surrounding context */
-    display: block; /* Ensures the image is treated as a block-level element, allowing margin auto to work */
-    }
-
-    .complexity img {
-    height: 550px;
-    }
-
-    .complexity .btn-box {
-    margin-top: 22px;
-    padding: 0;
-    border-radius: 0.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    }
-
-    .references {
-    margin-top: 100px;
-    }
-
-    .references a {
-    display: inline-block; /* Makes each link take the full width as a block, adding automatic line breaks */
-    margin-bottom: 15px; /* Adds space between the links */
-    text-decoration: none; /* Removes default underline from links */
-    transition: text-decoration 0.3s ease; /* Smooth transition for hover effect */
-    }
-
-    .references a:hover {
-    text-decoration: underline; /* Adds underline on hover */
-    }
+        .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        background-color: transparent; /* Initial background color */
+        transition: background-color 0.3s ease; /* Transition effect */
+        }
     
-    .references h2 {
-    margin-bottom: 15px; /* Adds space below the header */
-    }
-
-    @media screen and (max-width: 468px) {
-    .video-container video {
-    height: auto;
-    }
-    } 
-
-    @media screen and (max-width: 768px) {
-    .dimos-img {
-    width: 100px;
-    height: 100px; /* Adjust the max-width for smaller screens */
-    position: absolute;
-    margin-top: 45px;
-    left: calc(50% - 50px);
-    }
-    } 
-    </style>
-</head>
-<body>
+        .header.scrolled {
+        background-color: #1f618d; /* Background color when scrolled */
+        }
+    
+        .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        }
+    
+        .dimos-img {
+        width: 125px;
+        position: absolute;
+        margin-top: 45px;
+        left: calc(50% - 60px);
+        }
+    
+        .video {
+        margin-top: 150px; /* Adjust the value as needed */
+        }
+    
+        .video-container {
+        display: flex;
+        justify-content: center;
+        }
+    
+        .video-container video {
+        max-width: 100%; /* Ensure the video doesn't overflow its container */
+        height: 690;
+        }
+    
+        .complexity {
+        margin-top: 100px;
+        }
+    
+        .service-img, .complexity .img {
+        display: flex;
+        justify-content: center; /* Centers the image horizontally */
+        width: 100%; /* Ensures the container takes full width */
+        }
+    
+        .service-img img, .complexity img {
+        margin: auto; /* Additional centering for images specifically if flex doesn't fully apply due to surrounding context */
+        display: block; /* Ensures the image is treated as a block-level element, allowing margin auto to work */
+        }
+    
+        .complexity img {
+        height: 550px;
+        }
+    
+        .complexity .btn-box {
+        margin-top: 22px;
+        padding: 0;
+        border-radius: 0.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        }
+    
+        .references {
+        margin-top: 150px;
+        margin-bottom: -100px;
+        text-align: center;
+        }
+    
+        .references a {
+        font-size: 18px;
+        display: inline-block; /* Makes each link take the full width as a block, adding automatic line breaks */
+        margin-bottom: 15px; /* Adds space between the links */
+        text-decoration: none; /* Removes default underline from links */
+        transition: text-decoration 0.3s ease; /* Smooth transition for hover effect */
+        }
+    
+        .references a:hover {
+        text-decoration: underline; /* Adds underline on hover */
+        }
+        
+        .references h2 {
+        margin-bottom: 15px; /* Adds space below the header */
+        }
+    
+        @media screen and (max-width: 468px) {
+        .video-container video {
+        height: auto;
+        }
+        } 
+    
+        @media screen and (max-width: 768px) {
+        .dimos-img {
+        width: 100px;
+        height: 100px; /* Adjust the max-width for smaller screens */
+        position: absolute;
+        margin-top: 45px;
+        left: calc(50% - 50px);
+        }
+        } 
+        </style>
+    </head>
+    <body>
 
     <div id="loading-screen">
         <div id="loading-spinner"></div>
