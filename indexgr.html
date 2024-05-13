@@ -64,6 +64,55 @@
     height: 690;
     }
 
+    .complexity {
+    margin-top: 100px;
+    }
+
+    .service-img, .complexity .img {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    width: 100%; /* Ensures the container takes full width */
+    }
+
+    .service-img img, .complexity img {
+    margin: auto; /* Additional centering for images specifically if flex doesn't fully apply due to surrounding context */
+    display: block; /* Ensures the image is treated as a block-level element, allowing margin auto to work */
+    }
+
+    .complexity img {
+    height: 550px;
+    }
+
+    .complexity .btn-box {
+    margin-top: 22px;
+    padding: 0;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    }
+
+    .references {
+    margin-top: 100px;
+    }
+
+    .references a {
+    display: block; /* Makes each link take the full width as a block, adding automatic line breaks */
+    margin-bottom: 5px; /* Adds space between the links */
+    text-decoration: none; /* Removes default underline from links */
+    transition: text-decoration 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .references a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    }
+    
+    .references h2 {
+    margin-bottom: 15px; /* Adds space below the header */
+    }
+
     @media screen and (max-width: 468px) {
     .video-container video {
     height: auto;
@@ -119,7 +168,7 @@
             <div class="dropdown">
                 <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
                 <div class="dropdown-menu">
-                    <a href="underconstruction/underconstruction.html">3D Puzzle</a>
+                    <a href="3DPuzzlegr.html">3D Puzzle</a>
                     <a href="eduspacegr.html">Eduspace</a>
                 </div>
             </div>
@@ -233,6 +282,27 @@
                     <source src="lambousa.mp4">
                 </div>
             </div>
+
+            <div class="complexity">
+                <div class="title">
+                    <h1 class="animate__animated animate__slideInUp">Εκτίμηση της Πολυπλοκότητας</h1>
+                    <div class="line"></div>
+                </div>
+                <img src="./img/complexity.png" alt="Complexity & Quality" class="animate__animated animate__slideInUp">
+                <div class="btn-box">
+                    <a href="complexity.pdf" target="_blank" class="btn animate__animated animate__slideInRight">Περισσότερα</a>
+                </div>
+            </div>
+
+            <div class="references">
+                <h2>Αναφορές</h2>
+                <a href="https://www.limassol.org.cy/el/texniko">Δήμος Λεμεσού - Τεχνικό Τμήμα</a><br>
+                <a href="https://www.limassol.org.cy/el/istoriko-arxeio-kentro-meleton">Παττίχειο Ιστορικό Αρχείο και Κέντρο Μελετών</a><br>
+                <a href="https://www.dms.gov.cy/dms/shipping.nsf/home/home?openform">Υφυπουργείο Ναυτιλίας</a><br>
+                <a href="https://www.moa.gov.cy/moa/dfmr/dfmr.nsf/index_gr/index_gr?opendocument">Τμήμα Αλιείας και Θαλασσίων Ερευνών</a><br>
+                <a href="https://www.mjpo.gov.cy/mjpo/statearchive.nsf/page39_gr/page39_gr?OpenDocument">Κρατικό Αρχείο</a><br>
+                <a href="https://www.facebook.com/EU.Mnemosyne">Εργαστήριο Έρευνας Ψηφιακής Κληρονομιάς</a>
+            </div>
             
             <div class="home-gallery container-xxl py-5 px-0">
                 <div class="row g-0">
@@ -298,8 +368,6 @@
                     </div>
                 </div>
             </div>
-            
-
         </div>
     </section>
 

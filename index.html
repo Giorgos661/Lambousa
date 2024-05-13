@@ -64,6 +64,61 @@
     height: 690;
     }
 
+    .complexity {
+    margin-top: 100px;
+    }
+
+    .service-img, .complexity .img {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    width: 100%; /* Ensures the container takes full width */
+    }
+
+    .service-img img, .complexity img {
+    margin: auto; /* Additional centering for images specifically if flex doesn't fully apply due to surrounding context */
+    display: block; /* Ensures the image is treated as a block-level element, allowing margin auto to work */
+    }
+
+    .complexity img {
+    height: 550px;
+    }
+
+    .complexity .btn-box {
+    margin-top: 22px;
+    padding: 0;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    }
+
+    .references {
+    margin-top: 100px;
+    }
+
+    .references a {
+    display: block; /* Makes each link take the full width as a block, adding automatic line breaks */
+    margin-bottom: 5px; /* Adds space between the links */
+    text-decoration: none; /* Removes default underline from links */
+    transition: text-decoration 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .references a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    }
+    
+    .references h2 {
+    margin-bottom: 15px; /* Adds space below the header */
+    }
+
+    @media screen and (max-width: 468px) {
+    .video-container video {
+    height: auto;
+    }
+    } 
+
     @media screen and (max-width: 768px) {
     .dimos-img {
     width: 100px;
@@ -114,7 +169,7 @@
             <div class="dropdown">
                 <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
                 <div class="dropdown-menu">
-                    <a href="./3Dpuzzle/index.html">3D Puzzle</a>
+                    <a href="3DPuzzle.html">3D Puzzle</a>
                     <a href="eduspace.html">Eduspace</a>
                 </div>
             </div>
@@ -227,6 +282,27 @@
                     <video controls src="lambousa.mp4" width="1400" height="690"></video>
                     <source src="lambousa.mp4">
                 </div>
+            </div>
+
+            <div class="complexity">
+                <div class="title">
+                    <h1 class="animate__animated animate__slideInUp">Estimation of Complexity</h1>
+                    <div class="line"></div>
+                </div>
+                <img src="./img/complexity.png" alt="Complexity & Quality" class="animate__animated animate__slideInUp">
+                <div class="btn-box">
+                    <a href="complexity.pdf" target="_blank" class="btn animate__animated animate__slideInRight">Read More</a>
+                </div>
+            </div>
+
+            <div class="references">
+                <h2>References</h2>
+                <a href="https://www.limassol.org.cy/en/texniko">Limassol Municipality - Technical Department</a><br>
+                <a href="https://www.limassol.org.cy/en/istoriko-arxeio-kentro-meleton">Pattichion Municipal Museum – Historical Archive – Limassol Studies Centre</a><br>
+                <a href="https://www.dms.gov.cy/dms/shipping.nsf/home_en/home_en?openform">Shipping Deputy Ministry</a><br>
+                <a href="https://www.moa.gov.cy/moa/dfmr/dfmr.nsf/index_en/index_en?OpenDocument">Department of Fisheries and Marine Research</a><br>
+                <a href="https://www.mjpo.gov.cy/mjpo/statearchive.nsf/All/45701A94C790FE5FC22586A90034A72A?OpenDocument">Cyprus State Archives</a><br>
+                <a href="https://www.facebook.com/EU.Mnemosyne">Digital Heritage Research Lab</a>
             </div>
             
             <div class="home-gallery container-xxl py-5 px-0">
