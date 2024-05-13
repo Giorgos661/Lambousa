@@ -20,45 +20,35 @@
 
       .content {
         margin-top: 150px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 400px;
-        gap: 32px;
       }
 
-      .screen {
-        width: 47.5%;
-      }
-
-      .screen h6 {
+      .content h6 {
         margin-bottom: 16px;
         text-align: center;
       }
 
-      .screen-one,
-      .screen-two {
+      .screen {
         border: 1px solid #ccc;
         box-sizing: border-box;
-        height: 400px;
+        height: 450px;
+        background-color: rgb(204, 204, 204);
       }
 
-      .footer{
+      .screen.loading::after {
+        content: attr(data-loading-model-message);
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        color: rgb(5, 77, 136);
+      }
+
+      .footer {
         margin-top: 10vh;
       }
 
       @media screen and (max-width: 768px) {
-        .content {
-          flex-direction: column;
-          row-gap: 24px;
-        }
-
-        .screen {
-          width: 100%;
-        }
-
-        .footer{
-        margin-top: 70vh;
+        .footer {
+          margin-top: 79vh;
         }
       }
     </style>
@@ -90,13 +80,13 @@
                         <a href="3Dviewergr(1).html">Δομικό Μοντέλο</a>
                     </div>
                 </div>
-                <a href="./360/index.html" target="_blank">360 Virtual Tour</a>
+                <a href="../360/index.html" target="_blank">360 Virtual Tour</a>
             </div>
           </div>
           <div class="dropdown">
               <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
               <div class="dropdown-menu">
-                  <a href="../3Dpuzzle/index.html">3D Puzzle</a>
+                  <a href="../3DPuzzlegr.html">3D Puzzle</a>
                   <a href="../eduspacegr.html">Eduspace</a>
               </div>
           </div>
@@ -112,19 +102,20 @@
           <a href="../acknowledgementsgr.html" style="--i:5;">Ευχαριστίες</a>
           <a href="../contactgr.html" style="--i:6;">Επικοινωνία</a>
   
-          <a href="3Dviewer.html" style="margin-right: 1px;"><img src="../img/Greece.png" style="width: 24px; height: 20px;"></a>
-          <a href="3Dviewergr.html"><img src="../img/Uk.png" style="width: 24px; height: 20px;"></a>
+          <a href="3Dviewergr.html" style="margin-right: 1px;"><img src="../img/Greece.png" style="width: 24px; height: 20px;"></a>
+          <a href="3Dviewer.html"><img src="../img/Uk.png" style="width: 24px; height: 20px;"></a>
       </nav>
     </header>
 
-    <div class="content container">
-      <div class="screen screen-one-wrapper">
-        <h6>Συνολικό Μοντέλο</h6>
-        <div class="screen-one"></div>
-        <!-- <script src="./three.min.js"></script> -->
-      </div>
+    <div class="content container d-flex flex-column">
+      <h6>Συνολικό Μοντέλο</h6>
+      <div
+        class="screen w-100 position-relative"
+        data-loading-model-message="Loading model..."
+      ></div>
+      <!-- <script src="./three.min.js"></script> -->
     </div>
-<br><br><br><br><br>
+
     <footer class="footer">
       <p>
           © COPYRIGHT 2024. ΟΛΑ ΤΑ ΔΙΚΑΙΩΜΑΤΑ ΔΙΑΤΗΡΟΥΝΤΑΙ ΑΠΟ ΤΟ ΤΕΧΝΟΛΟΓΙΚΟ ΠΑΝΕΠΙΣΤΗΜΙΟ ΚΥΠΡΟΥ. ΣΧΕΔΙΑΣΜΕΝΟ ΚΑΙ ΑΝΑΠΤΥΓΜΕΝΟ ΑΠΟ ΤΟΝ
