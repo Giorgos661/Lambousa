@@ -58,7 +58,6 @@ window.onload = function () {
   }
 
   loadingManager.onProgress = function (url, itemsLoaded, itemsTotal) {
-    screenEl.classList.add('loading')
     console.log(
       'Loading file: ' +
         url +
