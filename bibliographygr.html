@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./img/anchor.png" />
+  <title>Λάμπουσα</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+  <style>
+    body {
+      position: relative; /* Changed from absolute to relative */
+      background: url('./img/MNEMOSYNE_Background.png') no-repeat center -30% fixed; /* Adjust the percentage value as needed */
+      background-size: 120%;
+    }
+    .main-content {
+      margin-top: 165px; /* Adjust this value based on the height of your navbar */
+    }
+    .citation-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      flex-wrap: wrap;
+    }
+    .main-content .h3 {
+      margin-bottom: 400px;
+    }
+    .citation-content {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .pdf-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    .pdf-link {
+      font-size: 24px;
+      color: #d32f2f;
+      margin-bottom: 10px;
+    }
+    .cite-button {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #12beff;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .cite-button:hover {
+      background-color: #1985ac;
+      color: #fff;
+    }
+    .container-bibliography {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header a:hover {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="header">
+    <a href="indexgr.html" class="logo">
+        <img src="./img/anchor.png">
+    </a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+    </label>
+
+    <nav class="navbar transparent">
+        <a href="indexgr.html" style="--i:0;">Αρχική</a>
+        <a href="ebookgr.html" target="_blank" style="--i:1;">Ebook</a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
+          <div class="dropdown-menu">
+              <!-- The 3D Models dropdown -->
+              <div class="dropdown models-dropdown">
+                  <a href="#" class="dropdown-toggle">3D Μοντέλα</a>
+                  <div class="dropdown-menu">
+                      <a href="./3Dviewer/3Dviewergr.html" target="_blank">Συνολικό Μοντέλο</a>
+                      <a href="./3Dviewer/3Dviewergr(1).html" target="_blank">Δομικό Μοντέλο</a>
+                  </div>
+              </div>
+              <a href="./360/index.html" target="_blank">360 Virtual Tour</a>
+          </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
+            <div class="dropdown-menu">
+                <a href="3DPuzzlegr.html">3D Puzzle</a>
+                <a href="eduspacegr.html">Eduspace</a>
+            </div>
+        </div>
+        <div class="dropdown" style="--i:4;">
+            <a href="#" class="dropdown-toggle">Γκαλερί</a>
+            <div class="dropdown-menu">
+                <a href="gallerygr.html">Φωτογραφίες</a>
+                <a href="interviewsgr.html">Συνεντεύξεις</a>
+                <a href="videosgr.html">Βίντεο</a>
+                <a href="Lambousa_Boat_Naval_Drawings.pdf" target="_blank">Σχέδια</a>
+                <a href="bibliographygr.html" class="active-page">Βιβλιογραφία</a>
+            </div>
+        </div>
+        <a href="acknowledgementsgr.html" style="--i:5;">Ευχαριστίες</a>
+        <a href="contactgr.html" style="--i:6;">Επικοινωνία</a>
+
+        <a href="#" style="margin-right: 1px;"><img src="./img/Greece.png" style="width: 24px; height: 20px;"></a>
+        <a href="bibliography.html"><img src="./img/Uk.png" style="width: 24px; height: 20px;"></a>
+    </nav>
+  </header>
+
+  <div class="title1">
+    <h2>Βιβλιογραφία</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="main-content">
+    <div class="container-bibliography">
+      <!--<h3>Bibliography</h3>-->
+      <div class="citation-entry row">
+        <div class="citation-content col-md-10 col-12">
+          <strong>Author(s):</strong> Χρήστος Χαραλάµπους<br>
+          <strong>Title:</strong> Σε κατάσταση αποσύνθεσης το ιστορικό «Λάµπουσα»<br>
+          <strong>Year:</strong> 2023<br>
+          <strong>Type:</strong> Webpage<br>
+          <strong>URL:</strong> <a href="https://dialogos.com.cy/se-katastasi-aposynthesis-to-istoriko-la-poysa/" target="_blank">https://dialogos.com.cy/se-katastasi-aposynthesis-to-istoriko-la-poysa/</a><br>
+        </div>
+        <!--<div class="pdf-column col-md-2 col-12">
+          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
+          <a href="#" class="cite-button">Cite This</a>
+        </div>-->
+      </div>
+      <div class="citation-entry row">
+        <div class="citation-content col-md-10 col-12">
+          <strong>Author(s):</strong> Limassol Municipality<br>
+          <strong>Title:</strong> LAMBOUSA FISHING VESSEL<br>
+          <strong>Year:</strong> 2018<br>
+          <strong>Type:</strong> Webpage<br>
+          <strong>Publisher:</strong> Limassol Municipality<br>
+          <strong>URL:</strong> <a href="https://www.limassol.org.cy/en/ploiario-Lampousa%20" target="_blank">https://www.limassol.org.cy/en/ploiario-Lampousa%20</a><br>
+        </div>
+        <!--<div class="pdf-column col-md-2 col-12">
+          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
+          <a href="#" class="cite-button">Cite This</a>
+        </div>-->
+      </div>
+      <div class="citation-entry row">
+        <div class="citation-content col-md-10 col-12">
+          <strong>Author(s):</strong> Giannis Papanastasiou<br>
+          <strong>Title:</strong> Lambousa, A boat with tradition<br>
+          <strong>Type:</strong> Webpage<br>
+          <strong>Publisher:</strong> Cyprus Alive<br>
+          <strong>Abstract:</strong> The Limassol Municipality, aiming to promote the city's maritime heritage, has incorporated the wooden fishing boat "Lambousa" into the redeveloped Molos promenade. From May to October, the boat will be displayed on a specially constructed jetty, while during the other months, it will be moved to the old port for weather protection. Built in 1955 in Piraeus and registered in Famagusta in 1965, the "Lambousa" measures 25 meters in length and has a capacity of 48 tons. Named after the owner's occupied village, the boat offers visitors guided tours to explore its nautical and fishing equipment.<br>
+          <strong>URL:</strong> <a href="https://www.limassol.org.cy/en/ploiario-Lampousa%20" target="_blank">https://www.limassol.org.cy/en/ploiario-Lampousa%20</a><br>
+        </div>
+        <!--<div class="pdf-column col-md-2 col-12">
+          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
+          <a href="#" class="cite-button">Cite This</a>
+        </div>-->
+      </div>
+      <div class="citation-entry row">
+        <div class="citation-content col-md-10 col-12">
+          <strong>Author(s):</strong> Χρήστος Χαραλάµπους<br>
+          <strong>Title:</strong> Στο καρνάγιο πεθαίνει το ιστορικό σκάφος «Λάμπουσα»<br>
+          <strong>Year:</strong> 2022<br>
+          <strong>Type:</strong> Webpage<br>
+          <strong>Abstract:</strong> Το ιστορικό αλιευτικό σκάφος "Λάμπουσα", ιδιοκτησία του Δήμου Λεμεσού, φθείρεται στο καρνάγιο μετά τη μετακίνησή του από την προβλήτα έκθεσης στο παλιό λιμάνι το 2019, λόγω ζημιών από τις καιρικές συνθήκες και παραμέλησης. Αρχικά προοριζόταν να μετατραπεί σε πλωτό μουσείο, αλλά το σκάφος έχει υποστεί σημαντικές ζημιές από το νερό και κλοπή εξαρτημάτων. Ο δήμος είχε σχέδια για την αποκατάστασή του, αλλά το έργο έχει καθυστερήσει και αντιμετωπίζει προκλήσεις, απαιτώντας σημαντική προσπάθεια για την ανακατασκευή του. <br>
+          <strong>URL:</strong> <a href="https://limassoltoday.com.cy/lemesos/dimos-lemesou/sto-karnagio-pethainei-to-istoriko-ska/" target="_blank">https://limassoltoday.com.cy/lemesos/dimos-lemesou/sto-karnagio-pethainei-to-istoriko-ska/</a><br>
+        </div>
+        <!--<div class="pdf-column col-md-2 col-12">
+          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
+          <a href="#" class="cite-button">Cite This</a>
+        </div>-->
+      </div>
+      <div class="citation-entry row">
+        <div class="citation-content col-md-10 col-12">
+          <strong>Author(s):</strong> The Marine Conservation Society<br>
+          <strong>Title:</strong> A quantification of bottom 
+          towed fishing activity in 
+          marine Natura 2000 sites<br>
+          <strong>Year:</strong> 2024<br>
+          <strong>Type:</strong> Report<br>
+          <strong>Pages:</strong> 50<br>
+          <strong>Abstract:</strong> "Bottom Towed Fishing Activity in Marine Natura 2000 Sites," published by Seas At Risk, investigates the impacts of bottom-towed fishing gear on protected marine areas within the Natura 2000 network. It highlights the ecological damage caused by such fishing practices, which threaten biodiversity and habitat integrity. The report calls for stricter regulations and enforcement to safeguard these sensitive environments, proposing alternatives to bottom-towed fishing to promote sustainable fisheries management and conservation efforts. <br>
+          <strong>URL:</strong> <a href="https://seas-at-risk.org/wp-content/uploads/2024/04/report_bottom_towed_fishing_actvity_in_marine_natura_2000_sites.pdf" target="_blank">https://seas-at-risk.org/wp-content/uploads/2024/04/report_bottom_towed<br>_fishing_actvity_in_marine_natura_2000_sites.pdf</a><br>
+        </div>
+        <!--<div class="pdf-column col-md-2 col-12">
+          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
+          <a href="#" class="cite-button">Cite This</a>
+        </div>-->
+      </div>
+      <div class="citation-entry row">
+        <div class="citation-content col-md-10 col-12">
+          <strong>Author(s):</strong> Ben Vollaard, Stephen Kastoryano<br>
+          <strong>Title:</strong> Exposing the destruction of marine life<br>
+          <strong>Year:</strong> 2023<br>
+          <strong>Type:</strong> Article<br>
+          <strong>URL:</strong> <a href="https://cepr.org/voxeu/columns/exposing-destruction-marine-life" target="_blank">https://cepr.org/voxeu/columns/exposing-destruction-marine-life</a><br>
+        </div>
+        <!--<div class="pdf-column col-md-2 col-12">
+          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
+          <a href="#" class="cite-button">Cite This</a>
+        </div>-->
+      </div>
+      <div class="citation-entry row">
+        <div class="citation-content col-md-10 col-12">
+          <strong>Author(s):</strong> ECODNA.ART<br>
+          <strong>Title:</strong> Traditional fishing boats destroyed by EU law<br>
+          <strong>Year:</strong> 2019<br>
+          <strong>Type:</strong> Article<br>
+          <strong>URL:</strong> <a href="https://ecodna.art/greek-traditional-fishing-boats-destroyed-by-eu-law/" target="_blank">https://ecodna.art/greek-traditional-fishing-boats-destroyed-by-eu-law/</a><br>
+        </div>
+        <!--<div class="pdf-column col-md-2 col-12">
+          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
+          <a href="#" class="cite-button">Cite This</a>
+        </div>-->
+      </div>
+      <div class="citation-entry row">
+        <div class="citation-content col-md-10 col-12">
+          <strong>Author(s):</strong> Κώστας Α. Δαμιανίδης<br>
+          <strong>Title:</strong> Ξυλοναυπηγική<br>
+          <strong>Year:</strong> 2013<br>
+          <strong>Type:</strong> Webpage<br>
+          <strong>Abstract:</strong> Η ιστοσελίδα της AYLA για την παραδοσιακή ξυλοναυπηγική περιγράφει την ιστορία και τις τεχνικές της κατασκευής ξύλινων πλοίων στην Ελλάδα. Αναλύει τη σημασία της ξυλοναυπηγικής στην ελληνική ναυτική παράδοση και πολιτιστική κληρονομιά, αναδεικνύοντας τις μεθόδους και τα εργαλεία που χρησιμοποιούνται από τους τεχνίτες. Επίσης, τονίζει την ανάγκη διατήρησης αυτής της τέχνης λόγω της απειλής από τον εκσυγχρονισμό και την αλλαγή των ναυπηγικών πρακτικών.<br>
+          <strong>URL:</strong> <a href="https://ayla.culture.gr/xilonaupigiki_wooden_shipbuilding/" target="_blank">https://ayla.culture.gr/xilonaupigiki_wooden_shipbuilding/</a><br>
+        </div>
+        <!--<div class="pdf-column col-md-2 col-12">
+          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
+          <a href="#" class="cite-button">Cite This</a>
+        </div>-->
+      </div>
+      
+    </div>
+  </div>
+
+  <section class="footer">
+    <p>
+      © COPYRIGHT 2024. ALL RIGHTS RESERVED BY THE CYPRUS UNIVERSITY OF
+      TECHNOLOGY. DESIGNED AND DEVELOPED BY
+      <a href="https://www.linkedin.com/in/giorgos-neofytou-a4b1b1245/"
+      target="_blank">GIORGOS NEOFYTOU</a>  AND <a href="https://www.linkedin.com/in/stelios-fotiou-b3351529a/" target="_blank">STELIOS FOTIOU</a
+      >
+      , IN THE FRAMEWORK OF BSC THESIS
+    </p>
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+      <img src="./img/by-nc-nd.eu.png" width="100" style="border-radius: 10%;">
+  </a>
+    <p>
+      THIS WORK IS LICENSED UNDER A <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+        CREATIVE COMMONS
+      ATTRIBUTION-NONCOMMERCIAL-NODERIVATIVES 4.0 INTERNATIONAL LICENSE.
+    </a>
+    </p>
+  </section>
+
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
