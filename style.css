@@ -916,7 +916,7 @@ ion-icon[name='logo-instagram']:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1212px) {
   .icons {
     display: inline-flex;
   }
