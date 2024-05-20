@@ -490,7 +490,7 @@ section > div {
 }
 
 .dropdown-menu a + a, .dropdown-menu .dropdown-toggle + a {
-  margin-top: 5px;
+  margin-top: 1px;
 }
 
 /* Nested dropdown positioning */
