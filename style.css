@@ -947,7 +947,7 @@ ion-icon[name='logo-instagram']:hover {
   }
 
   #check:checked ~ .navbar {
-    height: 29rem; /*height of responsive navbar*/
+    height: 100vh; /*height of responsive navbar*/
   }
 
   .navbar a {
