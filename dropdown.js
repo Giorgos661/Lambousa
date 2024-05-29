@@ -3,21 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', function(event) {
-            // Check if it's a touch device
-            if ('ontouchstart' in window || navigator.maxTouchPoints) {
-                event.preventDefault();
-                const dropdownMenu = this.nextElementSibling;
+            event.preventDefault();
+            const dropdownMenu = this.nextElementSibling;
 
-                // Toggle visibility of the current dropdown menu
-                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+            // Toggle visibility of the current dropdown menu
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 
-                // Close other dropdown menus
-                dropdownToggles.forEach(otherToggle => {
-                    if (otherToggle !== toggle) {
-                        otherToggle.nextElementSibling.style.display = 'none';
-                    }
-                });
-            }
+            // Close other dropdown menus
+            dropdownToggles.forEach(otherToggle => {
+                if (otherToggle !== toggle) {
+                    otherToggle.nextElementSibling.style.display = 'none';
+                }
+            });
         });
     });
 
@@ -30,3 +27,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
