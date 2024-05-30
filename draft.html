@@ -58,21 +58,28 @@
             width: 100%;
             height: auto;
         }
-        .porthole-container button {
+        .porthole-container .fishing-bobber {
             position: absolute;
-            top: 50%;
+            top: 68%; /* Adjusted value to move the bobber down */
             left: 50%;
             transform: translate(-50%, -50%);
-            padding: 10px 20px;
-            font-size: 14px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            color: #fff; /* Text color */
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none; /* Remove underline from link text */
+            animation: bobber 2s infinite ease-in-out;
         }
-        .porthole-container button:hover {
-            background-color: #0056b3;
+        .porthole-container .fishing-bobber:hover {
+            color: #e1e1e1; /* Change text color on hover */
+            text-decoration: underline;
+        }
+        @keyframes bobber {
+            0%, 100% {
+                transform: translate(-50%, -40%);
+            }
+            50% {
+                transform: translate(-50%, -60%);
+            }
         }
         @media (max-width: 768px) {
             .porthole-container {
@@ -163,19 +170,19 @@
     <div class="porthole-container-wrapper">
         <div class="porthole-container">
             <img src="./img/porthole.png" alt="Porthole">
-            <button>3-6</button>
+            <a href="eduspace1.html" class="fishing-bobber">3-6</a>
         </div>
         <div class="porthole-container">
-            <img src="./img/porthole.png" alt="Porthole">
-            <button>7-12</button>
+            <img src="./img/porthole1.png" alt="Porthole">
+            <a href="eduspace2.html" class="fishing-bobber">7-12</a>
         </div>
         <div class="porthole-container">
-            <img src="./img/porthole.png" alt="Porthole">
-            <button>13-17</button>
+            <img src="./img/porthole2.png" alt="Porthole">
+            <a href="eduspace3.html" class="fishing-bobber">13-17</a>
         </div>
         <div class="porthole-container">
-            <img src="./img/porthole.png" alt="Porthole">
-            <button>18+</button>
+            <img src="./img/porthole3.png" alt="Porthole">
+            <a href="eduspace4.html" class="fishing-bobber">18+</a>
         </div>
     </div>
 </body>
