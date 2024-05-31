@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,11 +28,6 @@
             background-size: cover;
             padding: 20px;
             box-sizing: border-box;
-            filter: blur(10px); /* Initial blur effect */
-            transition: filter 0.5s; /* Smooth transition */
-        }
-        body.loaded {
-            filter: none; /* Remove blur when loaded */
         }
         .header {
             width: 100%;
@@ -107,10 +103,6 @@
             }
         }
 
-        img.bg-img.loaded {
-            opacity: 1;
-        }
-
         /* Disable hover effect for plank and porthole images */
         .plank img:hover,
         .porthole-container img:hover {
@@ -119,6 +111,11 @@
     </style>
 </head>
 <body>
+
+    <div id="loading-screen">
+      <div id="loading-spinner"></div>
+    </div>
+
     <!-- Navbar -->
     <header class="header">
         <a href="index.html" class="logo">
@@ -196,10 +193,22 @@
         </div>
     </div>
 
+    <script defer src="app.js"></script>
     <script>
-      window.addEventListener('load', () => {
-        document.body.classList.add('loaded');
-      });
+        document.addEventListener("DOMContentLoaded", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        const headerImage = new Image();
+
+        headerImage.src = "./img/woodbg.png";
+
+        headerImage.onload = function () {
+            loadingScreen.classList.add("fade-out");
+
+            setTimeout(function () {
+                loadingScreen.style.display = "none";
+            }, 500); 
+        };
+        });
     </script>
   </body>
 </html>
