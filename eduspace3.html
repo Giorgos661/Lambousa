@@ -15,7 +15,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <style>
       body {
-      background: url('./img/pexels-ricky-esquivel-1802268.jpg') no-repeat center center fixed;
+      background: url('./img/woodbg.png') no-repeat center center fixed;
       background-size: cover;
     }
 
@@ -51,44 +51,61 @@
       </label>
   
       <nav class="navbar transparent">
-          <a href="index.html" style="--i:0;">Home</a>
-          <a href="ebook.html" target="_blank" style="--i:1;">Ebook</a>
-          <div class="dropdown">
-            <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
-            <div class="dropdown-menu">
-                <!-- The 3D Models dropdown -->
-                <div class="dropdown models-dropdown">
-                    <a href="#" class="dropdown-toggle">3D Models</a>
-                    <div class="dropdown-menu">
-                      <a href="./3Dviewer/3Dviewer.html" target="_blank">Overall Model</a>
-                      <a href="./3Dviewer/3Dviewer(1).html" target="_blank">Structural Model</a>
-                    </div>
+          <div class="navbar-item">
+              <a href="index.html" style="--i:0;">Home</a>
+          </div>
+          <div class="navbar-item">
+              <a href="ebook.html" target="_blank" style="--i:1;">Ebook</a>
+          </div>
+          <div class="navbar-item nav-dropdown-wrapper">
+              <div class="dropdown">
+                  <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
+                  <div class="dropdown-menu virtual-interaction-dropdown-menu">
+                      <!-- The 3D Models dropdown -->
+                      <div class="dropdown three-d-model-dropdown">
+                          <a href="#" class="dropdown-toggle">3D Models</a>
+                          <div class="dropdown-menu">
+                              <a href="./3Dviewer/3Dviewer.html" target="_blank">Overall Model</a>
+                              <a href="./3Dviewer/3Dviewer(1).html" target="_blank">Structural Model</a>
+                          </div>
+                      </div>
+                      <a href="./360/index.html" target="_blank">360 Virtual Tour</a>
+                  </div>
                 </div>
-                <a href="./360/index.html" target="_blank">360 Virtual Tour</a>
-            </div>
-          </div>
-          <div class="dropdown">
-              <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
-              <div class="dropdown-menu">
-                  <a href="3DPuzzle.html">3D Puzzle</a>
-                  <a href="eduspace.html" class="active-page">Eduspace</a>
+          </div>           
+          <div class="navbar-item nav-dropdown-wrapper">
+              <div class="dropdown">
+                  <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
+                  <div class="dropdown-menu">
+                      <a href="3DPuzzle.html">3D Puzzle</a>
+                      <a href="eduspace.html" class="active-page">Eduspace</a>
+                  </div>
               </div>
           </div>
-          <div class="dropdown">
-              <a href="#" class="dropdown-toggle" style="--i:4;">Portfolio</a>
-              <div class="dropdown-menu">
-                  <a href="gallery.html">Photos</a>
-                  <a href="interviews.html">Interviews</a>
-                  <a href="videos.html">Videos</a>
-                  <a href="Lambousa_Boat_Naval_Drawings.pdf" target="_blank">Drawings</a>
-                  <a href="bibliography.html">Bibliography</a>
+          <div class="navbar-item nav-dropdown-wrapper">
+              <div class="dropdown">
+                  <a href="#" class="dropdown-toggle" style="--i:4;">Portfolio</a>
+                  <div class="dropdown-menu">
+                      <a href="gallery.html">Photos</a>
+                      <a href="interviews.html">Interviews</a>
+                      <a href="videos.html">Videos</a>
+                      <a href="Lambousa_Boat_Naval_Drawings.pdf" target="_blank">Drawings</a>
+                      <a href="bibliography.html">Bibliography</a>
+                  </div>
               </div>
           </div>
-          <a href="acknowledgements.html" style="--i:5;">Acknowledgements</a>
-          <a href="contact.html" style="--i:6;">Contact</a>
-  
-          <a href="eduspace3gr.html" style="margin-right: 1px;"><img src="./img/Greece.png" style="width: 24px; height: 20px;"></a>
-          <a href="eduspace3.html"><img src="./img/Uk.png" style="width: 24px; height: 20px;"></a>
+          <div class="navbar-item">
+              <a href="acknowledgements.html" style="--i:5;">Acknowledgements</a>
+          </div>
+          <div class="navbar-item">
+              <a href="contact.html" style="--i:6;">Contact</a>
+          </div>
+          <div class="navbar-item">
+              <a href="eduspace3gr.html" style="margin-right: 1px;"><img src="./img/Greece.png" style="width: 24px; height: 20px;"></a>
+          </div>
+          <div class="navbar-item">
+              <a href="#"><img src="./img/Uk.png" style="width: 24px; height: 20px;"></a>
+          </div>
       </nav>
   </header>
 
@@ -143,7 +160,7 @@
     <section class="footer">
       <p>
         © COPYRIGHT 2024. ALL RIGHTS RESERVED BY THE CYPRUS UNIVERSITY OF
-        TECHNOLOGY. DESIGNED AND DEVELOPED BY
+        TECHNOLOGY. <br> DESIGNED AND DEVELOPED BY
         <a href="https://www.linkedin.com/in/giorgos-neofytou-a4b1b1245/"
         target="_blank">GIORGOS NEOFYTOU</a>  AND <a href="https://www.linkedin.com/in/stelios-fotiou-b3351529a/" target="_blank">STELIOS FOTIOU</a
         >
@@ -168,7 +185,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <!--<script src="dropdown.js"></script>-->
+    <script src="dropdown.js"></script>
 
   <script>
     function myFunction() {

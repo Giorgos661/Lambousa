@@ -43,57 +43,6 @@
     z-index: -1;
     }
 
-    .dimos-img {
-    width: 125px;
-    position: absolute;
-    margin-top: 45px;
-    left: calc(50% - 62.5px);
-    }
-
-    .video {
-    margin-top: 150px; /* Adjust the value as needed */
-    }
-
-    .video-container {
-    display: flex;
-    justify-content: center;
-    }
-
-    .video-container video {
-    max-width: 100%; /* Ensure the video doesn't overflow its container */
-    height: 690;
-    }
-
-    .complexity {
-    margin-top: 100px;
-    }
-
-    .service-img, .complexity .img {
-    display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    width: 100%; /* Ensures the container takes full width */
-    }
-
-    .service-img img, .complexity img {
-    margin: auto; /* Additional centering for images specifically if flex doesn't fully apply due to surrounding context */
-    display: block; /* Ensures the image is treated as a block-level element, allowing margin auto to work */
-    }
-
-    .complexity img {
-    height: 550px;
-    }
-
-    .complexity .btn-box {
-    margin-top: 22px;
-    padding: 0;
-    border-radius: 0.2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    }
-
     .references {
     margin-top: 150px;
     margin-bottom: -100px;
@@ -116,19 +65,58 @@
     margin-bottom: 15px; /* Adds space below the header */
     }
 
+    .hp-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Allows logos to wrap on smaller screens */
+    }
+
+    .hp-logos a {
+    margin: 10px; /* Add some spacing between the images */
+    }
+
+    .unesco-img {
+    height: 115px;
+    width: auto; /* Maintain aspect ratio */
+    }
+
+    .dimos-img {
+    width: 125px;
+    height: auto; /* Maintain aspect ratio */
+    }
+
+    .cut-img {
+    width: 250px;
+    height: auto; /* Maintain aspect ratio */
+    }
+
     @media screen and (max-width: 468px) {
     .video-container video {
     height: auto;
+    }
+    .unesco-img {
+    height: 80px; /* Adjust size for smaller screens */
+    }
+    .dimos-img {
+    width: 80px; /* Adjust size for smaller screens */
+    }
+    .cut-img {
+    width: 150px; /* Adjust size for smaller screens */
     }
     } 
 
     @media screen and (max-width: 768px) {
     .dimos-img {
     width: 100px;
-    height: 100px; /* Adjust the max-width for smaller screens */
-    position: absolute;
-    margin-top: 45px;
-    left: calc(50% - 50px);
+    height: auto; /* Adjust the max-width for smaller screens */
+    }
+    .unesco-img {
+    height: 100px; /* Adjust size for smaller screens */
+    }
+    .cut-img {
+    width: 200px; /* Adjust size for smaller screens */
     }
     } 
     </style>
@@ -152,45 +140,61 @@
         </label>
     
         <nav class="navbar transparent">
-            <a href="#" class="active-page" style="--i:0;">Home</a>
-            <a href="ebook.html" target="_blank" style="--i:1;">Ebook</a>
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
-                <div class="dropdown-menu">
-                    <!-- The 3D Models dropdown -->
-                    <div class="dropdown models-dropdown">
-                        <a href="#" class="dropdown-toggle">3D Models</a>
-                        <div class="dropdown-menu">
-                            <a href="./3Dviewer/3Dviewer.html" target="_blank">Overall Model</a>
-                            <a href="./3Dviewer/3Dviewer(1).html" target="_blank">Structural Model</a>
+            <div class="navbar-item">
+                <a href="#" class="active-page" style="--i:0;">Home</a>
+            </div>
+            <div class="navbar-item">
+                <a href="ebook.html" target="_blank" style="--i:1;">Ebook</a>
+            </div>
+            <div class="navbar-item nav-dropdown-wrapper">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
+                    <div class="dropdown-menu virtual-interaction-dropdown-menu">
+                        <!-- The 3D Models dropdown -->
+                        <div class="dropdown three-d-model-dropdown">
+                            <a href="#" class="dropdown-toggle">3D Models</a>
+                            <div class="dropdown-menu">
+                                <a href="./3Dviewer/3Dviewer.html" target="_blank">Overall Model</a>
+                                <a href="./3Dviewer/3Dviewer(1).html" target="_blank">Structural Model</a>
+                            </div>
                         </div>
+                        <a href="./360/index.html" target="_blank">360 Virtual Tour</a>
                     </div>
-                    <a href="./360/index.html" target="_blank">360 Virtual Tour</a>
-                </div>
-              </div>
-                       
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
-                <div class="dropdown-menu">
-                    <a href="3DPuzzle.html">3D Puzzle</a>
-                    <a href="eduspace.html">Eduspace</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle" style="--i:4;">Portfolio</a>
-                <div class="dropdown-menu">
-                    <a href="gallery.html">Photos</a>
-                    <a href="interviews.html">Interviews</a>
-                    <a href="videos.html">Videos</a>
-                    <a href="Lambousa_Boat_Naval_Drawings.pdf" target="_blank">Drawings</a>
-                    <a href="bibliography.html">Bibliography</a>
+                  </div>
+            </div>           
+            <div class="navbar-item nav-dropdown-wrapper">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
+                    <div class="dropdown-menu">
+                        <a href="3DPuzzle.html">3D Puzzle</a>
+                        <a href="eduspace.html">Eduspace</a>
+                    </div>
                 </div>
             </div>
-            <a href="acknowledgements.html" style="--i:5;">Acknowledgements</a>
-            <a href="contact.html" style="--i:6;">Contact</a>
-    
-            <a href="indexgr.html" style="margin-right: 1px;"><img src="./img/Greece.png" style="width: 24px; height: 20px;"></a>
-            <a href="#"><img src="./img/Uk.png" style="width: 24px; height: 20px;"></a>
+            <div class="navbar-item nav-dropdown-wrapper">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" style="--i:4;">Portfolio</a>
+                    <div class="dropdown-menu">
+                        <a href="gallery.html">Photos</a>
+                        <a href="interviews.html">Interviews</a>
+                        <a href="videos.html">Videos</a>
+                        <a href="Lambousa_Boat_Naval_Drawings.pdf" target="_blank">Drawings</a>
+                        <a href="bibliography.html">Bibliography</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-item">
+                <a href="acknowledgements.html" style="--i:5;">Acknowledgements</a>
+            </div>
+            <div class="navbar-item">
+                <a href="contact.html" style="--i:6;">Contact</a>
+            </div>
+            <div class="navbar-item">
+                <a href="indexgr.html" style="margin-right: 1px;"><img src="./img/Greece.png" style="width: 24px; height: 20px;"></a>
+            </div>
+            <div class="navbar-item">
+                <a href="#"><img src="./img/Uk.png" style="width: 24px; height: 20px;"></a>
+            </div>
         </nav>
     </header>
 
@@ -207,9 +211,18 @@
             <div class="btn-box">
                 <a href="#middle" class="btn animate__animated animate__slideInRight">Read More</a>
             </div>
-            <a href="https://www.limassol.org.cy/en/ploiario-Lampousa" target="_blank">
-                <img src="./img/logos/Dimos(EN).png" class="dimos-img animate__animated animate__slideInRight">
-            </a> 
+            
+            <div class="hp-logos">
+                <a href="https://erachair-dch.eu/" target="_blank">
+                    <img src="./img/logos/unesco.png" class="unesco-img animate__animated animate__slideInRight">
+                </a>
+                <a href="https://www.limassol.org.cy/en/ploiario-Lampousa" target="_blank">
+                    <img src="./img/logos/Dimos(EN).png" class="dimos-img animate__animated animate__slideInRight">
+                </a>
+                <a href="https://www.cut.ac.cy/?languageId=1" target="_blank">
+                    <img src="./img/logos/cut.png" class="cut-img animate__animated animate__slideInRight">
+                </a>
+            </div>
             </div>              
             <div id="middle"></div>
     </div>
@@ -356,7 +369,7 @@
     <footer class="footer">
         <p>
           © COPYRIGHT 2024. ALL RIGHTS RESERVED BY THE CYPRUS UNIVERSITY OF
-          TECHNOLOGY. DESIGNED AND DEVELOPED BY
+          TECHNOLOGY. <br> DESIGNED AND DEVELOPED BY
           <a href="https://www.linkedin.com/in/giorgos-neofytou-a4b1b1245/"
           target="_blank">GIORGOS NEOFYTOU</a>  AND <a href="https://www.linkedin.com/in/stelios-fotiou-b3351529a/" target="_blank">STELIOS FOTIOU</a
           >
@@ -375,7 +388,7 @@
 
     <!--<script src="lightbox-plus-jquery.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
-    <!--<script src="dropdown.js"></script>-->
+    <script src="dropdown.js"></script>
     <script defer src="app.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {

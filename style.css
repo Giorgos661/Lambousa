@@ -118,7 +118,7 @@ html {
 }
 
 .header-content {
-  margin-bottom: 150px;
+  /*margin-bottom: 0px;*/
   color: whitesmoke;
   text-align: center;
 }
@@ -420,7 +420,7 @@ section > div {
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: #3498DB;
+  background-color: #3498db;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -429,8 +429,9 @@ section > div {
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -439,7 +440,7 @@ section > div {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -452,22 +453,24 @@ section > div {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #2980B9;}
+.dropdown:hover .dropbtn {
+  background-color: #2980b9;
+}
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
-}
-
-.dropdown:hover > .dropdown-menu {
-  display: block;
 }
 
 .dropdown-menu {
@@ -480,7 +483,8 @@ section > div {
 }
 
 /* Apply styles uniformly to all anchors, including toggles */
-.dropdown-menu a, .dropdown-menu .dropdown-toggle {
+.dropdown-menu a,
+.dropdown-menu .dropdown-toggle {
   display: block;
   text-align: center;
   color: white;
@@ -489,19 +493,14 @@ section > div {
   cursor: pointer; /* Add cursor style for better user feedback */
 }
 
-.dropdown-menu a + a, .dropdown-menu .dropdown-toggle + a {
+.dropdown-menu a + a,
+.dropdown-menu .dropdown-toggle + a {
   margin-top: 1px;
 }
 
 /* Nested dropdown positioning */
 .dropdown .dropdown-menu .dropdown {
   position: relative;
-}
-
-.dropdown .dropdown-menu .dropdown:hover > .dropdown-menu {
-  display: block;
-  top: 0; /* Aligns the dropdown top with its parent */
-  left: 100%; /* Positions it to the right of its parent */
 }
 
 @media only screen and (max-width: 767px) {
@@ -953,7 +952,7 @@ ion-icon[name='logo-instagram']:hover {
   .navbar a {
     display: block;
     font-size: 1.1rem;
-    margin: 1.5rem 0;
+    /* margin: 1.5rem 0; */
     text-align: center;
     transform: translateY(-50px);
     opacity: 0;
@@ -982,7 +981,7 @@ ion-icon[name='logo-instagram']:hover {
   }
 }
 
-@media (max-width: 376px){
+@media (max-width: 376px) {
   .header-content h1 {
     font-size: 41px;
   }
@@ -995,7 +994,6 @@ ion-icon[name='logo-instagram']:hover {
   .dimos-img {
     bottom: 60px;
   }
-
 }
 
 @keyframes spin {
@@ -1167,16 +1165,16 @@ ion-icon[name='logo-instagram']:hover {
 }
 
 @media screen and (min-width: 769px) {
-  .models-dropdown > .dropdown-toggle {
-  width: calc(100% + 24px);
+  .three-d-model-dropdown > .dropdown-toggle {
+    width: calc(100% + 24px);
   }
-  }
+}
 
-  @media screen and (max-width: 768px) {
-  .models-dropdown > .dropdown-menu {
-  transform: translateX(-10%) !important;
+/* @media screen and (max-width: 768px) {
+  .three-d-model-dropdown > .dropdown-menu {
+    transform: translateX(-10%) !important;
   }
-  }
+} */
 
 .hidden {
   opacity: 0;
@@ -1264,4 +1262,42 @@ img:hover {
 
 .content p {
   margin-bottom: 50px; /* Adjust the space between paragraphs */
+}
+
+/* new additions */
+.dropdown .dropdown-menu .dropdown .dropdown-menu {
+  top: 0;
+  left: 100%;
+}
+
+.dropdown-toggle::after {
+  margin-left: 0.5em !important;
+  vertical-align: 0.2em !important;
+}
+
+.navbar > .navbar-item {
+  display: inline-block;
+}
+
+@media (min-width: 1213px) {
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown .dropdown-menu .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 1212px) {
+  .navbar > .navbar-item {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+
+  .three-d-model-dropdown > .dropdown-menu {
+    /* transform: translate(60px, -50%) !important; */
+    transform: translateX(-10%) !important;
+  }
 }

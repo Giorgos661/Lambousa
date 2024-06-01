@@ -89,46 +89,63 @@
     </label>
 
     <nav class="navbar transparent">
-        <a href="indexgr.html" style="--i:0;">Αρχική</a>
-        <a href="ebookgr.html" target="_blank" style="--i:1;">Ebook</a>
-        <div class="dropdown">
-          <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
-          <div class="dropdown-menu">
-              <!-- The 3D Models dropdown -->
-              <div class="dropdown models-dropdown">
-                  <a href="#" class="dropdown-toggle">3D Μοντέλα</a>
-                  <div class="dropdown-menu">
-                      <a href="./3Dviewer/3Dviewergr.html" target="_blank">Συνολικό Μοντέλο</a>
-                      <a href="./3Dviewer/3Dviewergr(1).html" target="_blank">Δομικό Μοντέλο</a>
-                  </div>
+        <div class="navbar-item">
+            <a href="indexgr.html" style="--i:0;">Αρχική</a>
+        </div>
+        <div class="navbar-item">
+            <a href="ebookgr.html" target="_blank" style="--i:1;">Ebook</a>
+        </div>
+        <div class="navbar-item nav-dropdown-wrapper">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" style="--i:2;">Virtual Interaction</a>
+                <div class="dropdown-menu virtual-interaction-dropdown-menu">
+                    <!-- The 3D Models dropdown -->
+                    <div class="dropdown three-d-model-dropdown">
+                        <a href="#" class="dropdown-toggle">3D Μοντέλα</a>
+                        <div class="dropdown-menu">
+                            <a href="./3Dviewer/3Dviewergr.html" target="_blank">Συνολικό Μοντέλο</a>
+                            <a href="./3Dviewer/3Dviewer(1)gr.html" target="_blank">Δομικό Μοντέλο</a>
+                        </div>
+                    </div>
+                    <a href="./360/index.html" target="_blank">360 Virtual Tour</a>
+                </div>
               </div>
-              <a href="./360/index.html" target="_blank">360 Virtual Tour</a>
-          </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
-            <div class="dropdown-menu">
-                <a href="3DPuzzlegr.html">3D Puzzle</a>
-                <a href="eduspacegr.html">Eduspace</a>
+        </div>           
+        <div class="navbar-item nav-dropdown-wrapper">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" style="--i:3;">Edugames</a>
+                <div class="dropdown-menu">
+                    <a href="3DPuzzlegr.html">3D Puzzle</a>
+                    <a href="eduspacegr.html">Eduspace</a>
+                </div>
             </div>
         </div>
-        <div class="dropdown" style="--i:4;">
-            <a href="#" class="dropdown-toggle">Πορτφόλιο</a>
-            <div class="dropdown-menu">
-                <a href="gallerygr.html">Φωτογραφίες</a>
-                <a href="interviewsgr.html">Συνεντεύξεις</a>
-                <a href="videosgr.html">Βίντεο</a>
-                <a href="Lambousa_Boat_Naval_Drawings.pdf" target="_blank">Σχέδια</a>
-                <a href="bibliographygr.html" class="active-page">Βιβλιογραφία</a>
+        <div class="navbar-item nav-dropdown-wrapper">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" style="--i:4;">Πορτφόλιο</a>
+                <div class="dropdown-menu">
+                    <a href="gallerygr.html">Φωτογραφίες</a>
+                    <a href="interviewsgr.html">Συνεντεύξεις</a>
+                    <a href="videosgr.html">Βίντεο</a>
+                    <a href="Lambousa_Boat_Naval_Drawings.pdf" target="_blank">Σχέδια</a>
+                    <a href="#" class="active-page">Βιβλιογραφία</a>
+                </div>
             </div>
         </div>
-        <a href="acknowledgementsgr.html" style="--i:5;">Ευχαριστίες</a>
-        <a href="contactgr.html" style="--i:6;">Επικοινωνία</a>
-
-        <a href="#" style="margin-right: 1px;"><img src="./img/Greece.png" style="width: 24px; height: 20px;"></a>
-        <a href="bibliography.html"><img src="./img/Uk.png" style="width: 24px; height: 20px;"></a>
+        <div class="navbar-item">
+            <a href="acknowledgementsgr.html" style="--i:5;">Ευχαριστίες</a>
+        </div>
+        <div class="navbar-item">
+            <a href="contactgr.html" style="--i:6;">Επικοινωνία</a>
+        </div>
+        <div class="navbar-item">
+            <a href="#" style="margin-right: 1px;"><img src="./img/Greece.png" style="width: 24px; height: 20px;"></a>
+        </div>
+        <div class="navbar-item">
+            <a href="bibliography.html"><img src="./img/Uk.png" style="width: 24px; height: 20px;"></a>
+        </div>
     </nav>
-  </header>
+</header>
 
   <div class="title1">
     <h2>Βιβλιογραφία</h2>
@@ -257,7 +274,7 @@
   <section class="footer">
     <p>
       © COPYRIGHT 2024. ALL RIGHTS RESERVED BY THE CYPRUS UNIVERSITY OF
-      TECHNOLOGY. DESIGNED AND DEVELOPED BY
+      TECHNOLOGY. <br> DESIGNED AND DEVELOPED BY
       <a href="https://www.linkedin.com/in/giorgos-neofytou-a4b1b1245/"
       target="_blank">GIORGOS NEOFYTOU</a>  AND <a href="https://www.linkedin.com/in/stelios-fotiou-b3351529a/" target="_blank">STELIOS FOTIOU</a
       >
@@ -286,6 +303,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <!--<script src="dropdown.js"></script>-->
+  <script src="dropdown.js"></script>
 </body>
 </html>
