@@ -11,13 +11,60 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-	 <style>
-        .instructions {
-            margin-left: 100px; /* Add margin to the left */
-            margin-right: 100px; /* Add margin to the right */
+    <style>
+     .instructions {
+      margin-left: 100px; /* Add margin to the left */
+      margin-right: 100px; /* Add margin to the right */
 			margin-bottom: 40px;
+      flex: 1;
+          text-align: left;
+          padding: 10px;
+          font-size: 2rem;
+          background-color: #f9f9f9;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          overflow: auto;
         }
-    </style>
+
+        .responsive-iframe {
+          width: 100%;
+          height: 900px; /* Adjust height as needed */
+          border: none; /* Removes border */
+
+        }
+
+      @media (min-width: 1700px) {
+        .container1 {
+          display: flex; /* Enables Flexbox layout */
+          justify-content: space-between; /* Spaces children evenly */
+          align-items: flex-start; /* Aligns children at the top */
+          padding: 20px; /* Adds padding around the inside of the container */
+          gap: 0px; /* Adds space between the iframe and the instructions */
+        }
+      
+        .responsive-iframe {
+          flex: 3; /* Takes up more space */
+          height: 900px; /* Adjust height as needed */
+          border: none; /* Removes border */
+          margin-left: -500px;
+        }
+      
+        .instructions {
+          flex: 1;
+          text-align: left;
+          padding: 10px;
+          font-size: 2rem;
+          background-color: #f9f9f9;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          overflow: auto;
+          margin-top: 200px; /* Adjust or add this if the .container1 margin is not enough */
+          margin-right: 100px;
+          margin-left: -550px;
+          max-width: 900px;
+        }
+      }
+      </style>
   </head>
   <!-- <br><br><br><br><br><br> -->
   <body class="contact-body">
@@ -91,20 +138,20 @@
           </div>
       </nav>
   </header>
-<main>
-    <iframe src="https://elambousa.eu/3D_puzzle/index.html" style="width: 100%; height: 900px; border: none;"></iframe>
-    <div class="instructions">
-    <h4>Follow These Instructions to Download the Game for a Better Experience:</h4><br>
-    <h5>1. Click on the link labeled "Download the Desktop Version" to start downloading the game. </h5>
-    <h5>2. Choose "Extract All..." or "Unzip..." from the context menu.</h5>
-    <h5>3. Select a destination folder where you want the extracted files to go and confirm by clicking "Extract".</h5>
-    <h5>4. Open the folder where you extracted all the files. Ensure that all game files remain together in this single folder.</h5>
-    <h5>5. Look for the executable file named Lambousa 3D Puzzle.exe.</h5>
-    <h5>6. Open the executable and you are ready to play the game.</h5><br>
-    <h5><a href="/Lambousa 3D Puzzle.zip" download class="game-download-link">Download the Desktop Version</a>
-	</div>
-
-</main>
+  <main>
+    <div class="container1">
+      <iframe class="responsive-iframe" src="https://elambousa.eu/3D_puzzle/index.html"></iframe>
+      <div class="instructions" style="font-size: 2rem;">
+        <h4>For you convenience you may <a href="/Lambousa 3D Puzzle.zip" download class="game-download-link">DOWNLOAD</a> the Desktop Version</h4><br>
+        <h5>1. Click on the link labeled "DOWNLOAD" to start downloading the game. </h5>
+        <h5>2. Choose "Extract All..." or "Unzip..." from the context menu.</h5>
+        <h5>3. Select a destination folder where you want the extracted files to go and confirm by clicking "Extract".</h5>
+        <h5>4. Open the folder where you extracted all the files. Ensure that all game files remain together in this single folder.</h5>
+        <h5>5. Look for the executable file named Lambousa 3D Puzzle.exe.</h5>
+        <h5>6. Open the executable and you are ready to play the game.</h5><br>
+      </div>
+    </div>
+  </main>
     <section class="footer">
         <p>
           © COPYRIGHT 2024. ALL RIGHTS RESERVED BY THE CYPRUS UNIVERSITY OF
