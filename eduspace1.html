@@ -28,8 +28,27 @@
     iframe,
     script {
     margin-bottom: 20px; /* Adjust margin between each element */
+    
     }
 
+    .plank {
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center;     /* Centers children vertically if needed */
+}
+
+.plank img {
+    margin-top: 150px;
+    max-width: 50%;        /* Adjust the size as needed */
+    height: auto;
+}
+        @media (max-width: 600px) {
+         .plank img {
+            margin-top: 100px;
+            max-width: 80%;
+            height: auto;
+         }
+        }
     </style>
   </head>
   <body class="contact-body">
@@ -104,12 +123,9 @@
       </nav>
   </header>
 
-    <div class="title1">
-        <h2>Eduspace</h2>
-        <div class="line"></div>
-      </div>
-    <br><br><br><br><br>
-
+    <div class="plank bg-img">
+        <img src="./img/cooltext459613455222616.png" alt="Plank">
+    </div>
     <div class="container-eduspace">
 
       <div class="dropdown">
