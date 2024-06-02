@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="style.css" />
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <style>
     body {
-      position: relative; /* Changed from absolute to relative */
-      background: url('./img/MNEMOSYNE_Background.png') no-repeat center -81% fixed; /* Adjust the percentage value as needed */
+      position: relative;
+      background: url('./img/MNEMOSYNE_Background.png') no-repeat center -81% fixed;
       background-size: cover;
     }
     .main-content {
-      margin-top: 165px; /* Adjust this value based on the height of your navbar */
+      margin-top: 165px;
     }
     .citation-entry {
       display: flex;
@@ -41,13 +41,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
       margin-top: 10px;
     }
     .pdf-link {
       font-size: 24px;
       color: #d32f2f;
-      margin-bottom: 10px;
+      margin-right: 8px;
+      cursor: pointer;
     }
     .cite-button {
       display: inline-block;
@@ -57,10 +57,19 @@
       text-align: center;
       border-radius: 4px;
       text-decoration: none;
+      white-space: nowrap;
+      border: none;
+      cursor: pointer;
     }
     .cite-button:hover {
       background-color: #1985ac;
       color: #fff;
+    }
+    .pdf-and-cite {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
     .container-bibliography {
       max-width: 800px;
@@ -72,6 +81,44 @@
     }
     header a:hover {
       text-decoration: none;
+    }
+    .modal-dialog {
+      max-width: 80%; /* Make modal wider */
+    }
+    .modal-content {
+      height: 90vh; /* Fixed height for modal content */
+    }
+    .modal-body {
+      height: 100%; /* Use full height of modal content */
+      overflow: hidden; /* Hide modal body's scrollbar */
+    }
+    .modal-body iframe {
+      width: 100%;
+      height: 100%; /* Ensure the iframe takes the full height of the modal body */
+      border: none; /* Remove iframe border */
+      zoom: 1.5; /* Zoom in on the PDF */
+    }
+    .modal-header .close {
+      font-size: 1.5rem;
+      color: #000;
+    }
+    .btn-download {
+      background-color: #6c757d; /* Grey button */
+      color: white;
+    }
+    .btn-close {
+      background-color: #007bff; /* Blue button */
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .btn-close:hover {
+      background-color: #0056b3;
+    }
+    .no-scroll {
+      overflow: hidden;
     }
   </style>
 </head>
@@ -154,7 +201,6 @@
 
   <div class="main-content">
     <div class="container-bibliography">
-      <!--<h3>Bibliography</h3>-->
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
           <strong>Author(s):</strong> Χρήστος Χαραλάµπους<br>
@@ -163,10 +209,12 @@
           <strong>Type:</strong> Webpage<br>
           <strong>URL:</strong> <a href="https://dialogos.com.cy/se-katastasi-aposynthesis-to-istoriko-la-poysa/" target="_blank">https://dialogos.com.cy/se-katastasi-aposynthesis-to-istoriko-la-poysa/</a><br>
         </div>
-        <!--<div class="pdf-column col-md-2 col-12">
-          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
-          <a href="#" class="cite-button">Cite This</a>
-        </div>-->
+        <div class="pdf-column col-md-2 col-12">
+          <div class="pdf-and-cite">
+            <a class="pdf-link" data-toggle="modal" data-target="#pdfModal1"><i class="fas fa-file-pdf" style="color: #ff0000;"></i></a>
+            <button type="button" class="cite-button" data-citation="Χρήστος Χαραλάµπους, Σε κατάσταση αποσύνθεσης το ιστορικό «Λάµπουσα», 2023">Cite This</button>
+          </div>
+        </div>
       </div>
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
@@ -177,10 +225,12 @@
           <strong>Publisher:</strong> Limassol Municipality<br>
           <strong>URL:</strong> <a href="https://www.limassol.org.cy/en/ploiario-Lampousa%20" target="_blank">https://www.limassol.org.cy/en/ploiario-Lampousa%20</a><br>
         </div>
-        <!--<div class="pdf-column col-md-2 col-12">
-          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
-          <a href="#" class="cite-button">Cite This</a>
-        </div>-->
+        <div class="pdf-column col-md-2 col-12">
+          <div class="pdf-and-cite">
+            <a href="#" class="pdf-link"><i class="fas fa-file-pdf" style="color: #ff0000;"></i></a>
+            <button type="button" class="cite-button" data-citation="Limassol Municipality, LAMBOUSA FISHING VESSEL, 2018">Cite This</button>
+          </div>
+        </div>
       </div>
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
@@ -191,10 +241,12 @@
           <strong>Abstract:</strong> The Limassol Municipality, aiming to promote the city's maritime heritage, has incorporated the wooden fishing boat "Lambousa" into the redeveloped Molos promenade. From May to October, the boat will be displayed on a specially constructed jetty, while during the other months, it will be moved to the old port for weather protection. Built in 1955 in Piraeus and registered in Famagusta in 1965, the "Lambousa" measures 25 meters in length and has a capacity of 48 tons. Named after the owner's occupied village, the boat offers visitors guided tours to explore its nautical and fishing equipment.<br>
           <strong>URL:</strong> <a href="https://www.limassol.org.cy/en/ploiario-Lampousa%20" target="_blank">https://www.limassol.org.cy/en/ploiario-Lampousa%20</a><br>
         </div>
-        <!--<div class="pdf-column col-md-2 col-12">
-          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
-          <a href="#" class="cite-button">Cite This</a>
-        </div>-->
+        <div class="pdf-column col-md-2 col-12">
+          <div class="pdf-and-cite">
+            <a href="#" class="pdf-link"><i class="fas fa-file-pdf" style="color: #ff0000;"></i></a>
+            <button type="button" class="cite-button" data-citation="Giannis Papanastasiou, Lambousa, A boat with tradition, 2021">Cite This</button>
+          </div>
+        </div>
       </div>
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
@@ -205,10 +257,12 @@
           <strong>Abstract:</strong> The historic fishing boat "Lamboussa", owned by the Limassol Municipality, is deteriorating in the boatyard after being moved from the exhibition pier to the old port in 2019, due to weather damage and neglect. Originally intended to be converted into a floating museum, the vessel has suffered significant water damage and theft of parts. The municipality had plans to restore it, but the project has been delayed and faces challenges, requiring a significant effort to rebuild it. <br>
           <strong>URL:</strong> <a href="https://limassoltoday.com.cy/lemesos/dimos-lemesou/sto-karnagio-pethainei-to-istoriko-ska/" target="_blank">https://limassoltoday.com.cy/lemesos/dimos-lemesou/sto-karnagio-pethainei-to-istoriko-ska/</a><br>
         </div>
-        <!--<div class="pdf-column col-md-2 col-12">
-          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
-          <a href="#" class="cite-button">Cite This</a>
-        </div>-->
+        <div class="pdf-column col-md-2 col-12">
+          <div class="pdf-and-cite">
+            <a href="#" class="pdf-link"><i class="fas fa-file-pdf" style="color: #ff0000;"></i></a>
+            <button type="button" class="cite-button" data-citation="Χρήστος Χαραλάµπους, Στο καρνάγιο πεθαίνει το ιστορικό σκάφος «Λάμπουσα», 2022">Cite This</button>
+          </div>
+        </div>
       </div>
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
@@ -222,10 +276,12 @@
           <strong>Abstract:</strong> "Bottom Towed Fishing Activity in Marine Natura 2000 Sites," published by Seas At Risk, investigates the impacts of bottom-towed fishing gear on protected marine areas within the Natura 2000 network. It highlights the ecological damage caused by such fishing practices, which threaten biodiversity and habitat integrity. The report calls for stricter regulations and enforcement to safeguard these sensitive environments, proposing alternatives to bottom-towed fishing to promote sustainable fisheries management and conservation efforts. <br>
           <strong>URL:</strong> <a href="https://seas-at-risk.org/wp-content/uploads/2024/04/report_bottom_towed_fishing_actvity_in_marine_natura_2000_sites.pdf" target="_blank">https://seas-at-risk.org/wp-content/uploads/2024/04/report_bottom_towed<br>_fishing_actvity_in_marine_natura_2000_sites.pdf</a><br>
         </div>
-        <!--<div class="pdf-column col-md-2 col-12">
-          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
-          <a href="#" class="cite-button">Cite This</a>
-        </div>-->
+        <div class="pdf-column col-md-2 col-12">
+          <div class="pdf-and-cite">
+            <a href="#" class="pdf-link"><i class="fas fa-file-pdf" style="color: #ff0000;"></i></a>
+            <button type="button" class="cite-button" data-citation="The Marine Conservation Society, A quantification of bottom towed fishing activity in marine Natura 2000 sites, 2024">Cite This</button>
+          </div>
+        </div>
       </div>
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
@@ -235,10 +291,12 @@
           <strong>Type:</strong> Article<br>
           <strong>URL:</strong> <a href="https://cepr.org/voxeu/columns/exposing-destruction-marine-life" target="_blank">https://cepr.org/voxeu/columns/exposing-destruction-marine-life</a><br>
         </div>
-        <!--<div class="pdf-column col-md-2 col-12">
-          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
-          <a href="#" class="cite-button">Cite This</a>
-        </div>-->
+        <div class="pdf-column col-md-2 col-12">
+          <div class="pdf-and-cite">
+            <a href="#" class="pdf-link"><i class="fas fa-file-pdf" style="color: #ff0000;"></i></a>
+            <button type="button" class="cite-button" data-citation="Ben Vollaard, Stephen Kastoryano, Exposing the destruction of marine life, 2023">Cite This</button>
+          </div>
+        </div>
       </div>
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
@@ -248,10 +306,12 @@
           <strong>Type:</strong> Article<br>
           <strong>URL:</strong> <a href="https://ecodna.art/greek-traditional-fishing-boats-destroyed-by-eu-law/" target="_blank">https://ecodna.art/greek-traditional-fishing-boats-destroyed-by-eu-law/</a><br>
         </div>
-        <!--<div class="pdf-column col-md-2 col-12">
-          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
-          <a href="#" class="cite-button">Cite This</a>
-        </div>-->
+        <div class="pdf-column col-md-2 col-12">
+          <div class="pdf-and-cite">
+            <a href="#" class="pdf-link"><i class="fas fa-file-pdf" style="color: #ff0000;"></i></a>
+            <button type="button" class="cite-button" data-citation="ECODNA.ART, Traditional fishing boats destroyed by EU law, 2019">Cite This</button>
+          </div>
+        </div>
       </div>
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
@@ -262,12 +322,35 @@
           <strong>Abstract:</strong> The AYLA website on traditional woodcrafts describes the history and techniques of wooden shipbuilding in Greece. It analyses the importance of woodcrafts in the Greek maritime tradition and cultural heritage, highlighting the methods and tools used by the craftsmen. It also emphasizes the need to preserve this art due to the threat of modernization and changing shipbuilding practices.<br>
           <strong>URL:</strong> <a href="https://ayla.culture.gr/xilonaupigiki_wooden_shipbuilding/" target="_blank">https://ayla.culture.gr/xilonaupigiki_wooden_shipbuilding/</a><br>
         </div>
-        <!--<div class="pdf-column col-md-2 col-12">
-          <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i></a>
-          <a href="#" class="cite-button">Cite This</a>
-        </div>-->
+        <div class="pdf-column col-md-2 col-12">
+          <div class="pdf-and-cite">
+            <a href="#" class="pdf-link"><i class="fas fa-file-pdf" style="color: #ff0000;"></i></a>
+            <button type="button" class="cite-button" data-citation="Κώστας Α. Δαμιανίδης, Ξυλοναυπηγική, 2013">Cite This</button>
+          </div>
+        </div>
       </div>
       
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="pdfModal1" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pdfModalLabel1">PDF Document</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe src="dialogos.pdf" style="width:100%; height:100%;" frameborder="0"></iframe>
+        </div>
+        <div class="modal-footer">
+          <a href="dialogos.pdf" class="btn btn-download" download>Download File</a>
+          <!--<button type="button" class="btn btn-close" data-dismiss="modal">Close</button>-->
+        </div>
+      </div>
     </div>
   </div>
 
@@ -304,5 +387,25 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="dropdown.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.pdf-link').on('click', function() {
+        var targetModal = $(this).data('target');
+        $(targetModal).modal('show');
+      });
+
+      $('.cite-button').on('click', function() {
+        var citationText = $(this).data('citation');
+        navigator.clipboard.writeText(citationText).then(function() {
+          var button = $(this);
+          var originalText = button.text();
+          button.text('Copied');
+          setTimeout(function() {
+            button.text(originalText);
+          }, 2000);
+        }.bind(this));
+      });
+    });
+  </script>
 </body>
 </html>
