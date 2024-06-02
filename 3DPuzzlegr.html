@@ -13,8 +13,8 @@
     />
     <style>
         .instructions {
-         margin-left: 100px; /* Add margin to the left */
-         margin-right: 100px; /* Add margin to the right */
+         margin-left: 5px; /* Add margin to the left */
+         margin-right: 5px; /* Add margin to the right */
                margin-bottom: 40px;
          flex: 1;
              text-align: left;
@@ -30,10 +30,11 @@
              width: 100%;
              height: 900px; /* Adjust height as needed */
              border: none; /* Removes border */
+             
    
            }
    
-         @media (min-width: 1400px) {
+         @media (min-width: 1300px) {
            .container1 {
              display: flex; /* Enables Flexbox layout */
              justify-content: space-between; /* Spaces children evenly */
@@ -46,7 +47,7 @@
              flex: 3; /* Takes up more space */
              height: 900px; /* Adjust height as needed */
              border: none; /* Removes border */
-             margin-left: -400px;
+             margin-left: -300px;
            }
          
            .instructions {
@@ -59,11 +60,42 @@
              border-radius: 5px;
              overflow: auto;
              margin-top: 200px; /* Adjust or add this if the .container1 margin is not enough */
-             margin-right: 100px;
-             margin-left: -400px;
+             margin-right: 40px;
+             margin-left: -300px;
              max-width: 900px;
            }
          }
+         @media (min-width: 1700px) {
+        .container1 {
+          display: flex; /* Enables Flexbox layout */
+          justify-content: space-between; /* Spaces children evenly */
+          align-items: flex-start; /* Aligns children at the top */
+          padding: 20px; /* Adds padding around the inside of the container */
+          gap: 0px; /* Adds space between the iframe and the instructions */
+        }
+      
+        .responsive-iframe {
+          flex: 3; /* Takes up more space */
+          height: 900px; /* Adjust height as needed */
+          border: none; /* Removes border */
+          margin-left: -550px;
+        }
+      
+        .instructions {
+          flex: 1;
+          text-align: left;
+          padding: 10px;
+          font-size: 2rem;
+          background-color: #f9f9f9;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          overflow: auto;
+          margin-top: 200px; /* Adjust or add this if the .container1 margin is not enough */
+          margin-right: 100px;
+          margin-left: -550px;
+          max-width: 900px;
+        }
+      }
          </style>
   </head>
   <!-- <br><br><br><br><br><br> -->
