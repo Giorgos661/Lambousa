@@ -30,8 +30,6 @@
            width: 100%;
            height: 750px; /* Adjust height as needed */
            border: none; /* Removes border */
-           
- 
          }
  
        @media (min-width: 1300px) {
@@ -64,6 +62,9 @@
            margin-left: -300px;
            max-width: 900px;
          }
+         .container1 .alternative-message {
+    display: none;
+}
        }
        @media (min-width: 1700px) {
       .container1 {
@@ -95,7 +96,31 @@
         margin-left: -550px;
         max-width: 900px;
       }
+      .container1 .alternative-message {
+    display: none;
+}
     }
+
+
+/* Media Query for screens less than or equal to 480 pixels wide */
+@media (max-width: 480px) {
+    .container1 .responsive-iframe {
+        display: none;  /* Hide the iframe */
+    }
+    .container1 .alternative-message {
+      margin-top: 100px;
+        display: block; /* Now show the message */
+        padding: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+    }
+}
+@media (min-width: 480px) {
+  .container1 .alternative-message {
+    display: none;
+}
+}
        </style>
   </head>
   <!-- <br><br><br><br><br><br> -->
@@ -184,6 +209,9 @@
 <main>
     <div class="container1">
     <iframe class="responsive-iframe" src="https://elambousa.eu/3D_puzzle/index.html"></iframe>
+    <div class="alternative-message">
+      <h3>Το 3D Puzzle είναι διαθέσιμο μόνο για Windows</h3>
+   </div>
     <div class="instructions" style="font-size: 2rem;">
         <h5>Για καλύτερη εμπειρία μπορείτε να <a href="Lambousa 3D Puzzle.zip" download class="game-download-link">ΚΑΤΕΒΑΣΕΤΕ</a> την έκδοση για υπολογιστή</h5><br>
         <h6>1. Κάντε κλικ στον σύνδεσμο που αναγράφεται "ΚΑΤΕΒΑΣΕΤΕ" για να ξεκινήσετε τη λήψη του παιχνιδιού.</h6>
