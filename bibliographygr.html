@@ -137,6 +137,11 @@ header a:hover {
   </style>
 </head>
 <body>
+
+  <div id="loading-screen">
+    <div id="loading-spinner"></div>
+  </div>
+
   <!-- Navbar -->
   <header class="header">
     <a href="indexgr.html" class="logo">
@@ -549,6 +554,22 @@ header a:hover {
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="dropdown.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const loadingScreen = document.getElementById("loading-screen");
+    const headerImage = new Image();
+
+    headerImage.src = "./img/MNEMOSYNE_Background.png";
+
+    headerImage.onload = function () {
+        loadingScreen.classList.add("fade-out");
+
+        setTimeout(function () {
+            loadingScreen.style.display = "none";
+        }, 500); 
+    };
+    });
+  </script>
   <script>
     $(document).ready(function() {
       $('.pdf-link').on('click', function() {
