@@ -15,9 +15,11 @@
   background: url('./img/MNEMOSYNE_Background.png') no-repeat center -67% fixed;
   background-size: cover;
 }
+
 .main-content {
   margin-top: 165px;
 }
+
 .citation-entry {
   display: flex;
   justify-content: space-between;
@@ -31,21 +33,25 @@
   flex-wrap: wrap;
   position: relative;
 }
+
 .citation-content {
   flex: 1;
   margin-right: 10px;
 }
+
 .pdf-column {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
+
 .pdf-link {
   font-size: 24px;
   color: #d32f2f;
   margin-right: 8px;
   cursor: pointer;
 }
+
 .cite-button {
   display: inline-block;
   padding: 5px 10px;
@@ -58,48 +64,64 @@
   border: none;
   cursor: pointer;
 }
+
 .cite-button:hover {
   background-color: #1985ac;
   color: #fff;
 }
+
 .pdf-and-cite {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
+
 .container-bibliography {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
+
 header a:hover {
   text-decoration: none;
 }
+
 .modal-dialog {
   max-width: 80%; /* Make modal wider */
 }
+
 .modal-content {
   height: 90vh; /* Fixed height for modal content */
 }
+
 .modal-body {
   height: 100%; /* Use full height of modal content */
   overflow: hidden; /* Hide modal body's scrollbar */
 }
+
 .modal-body iframe {
   width: 100%;
   height: 100%; /* Ensure the iframe takes the full height of the modal body */
   border: none; /* Remove iframe border */
   zoom: 1.7; /* Zoom in on the PDF */
 }
+
 .modal-header .close {
   font-size: 1.5rem;
   color: #000;
 }
+
 .btn-download {
   background-color: #6c757d; /* Grey button */
   color: white;
 }
+
+.btn-download:hover {
+  background-color: #5a6268; /* Darker grey */
+  color: white;
+}
+
 .btn-close {
   background-color: #007bff; /* Blue button */
   color: white;
@@ -108,10 +130,29 @@ header a:hover {
   border-radius: 4px;
   font-size: 1rem;
 }
+
 .btn-close:hover {
   background-color: #0056b3;
 }
- .no-scroll {
+
+.btn-close-modern {
+  color: #7f7f7f;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-close-modern i {
+  font-size: 18px;
+}
+
+.no-scroll {
   overflow: hidden;
 }
 
@@ -348,11 +389,15 @@ header a:hover {
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
           <strong>Author(s):</strong> Κώστας Α. Δαμιανίδης<br>
-          <strong>Title:</strong> Ξυλοναυπηγική<br>
-          <strong>Year:</strong> 2013<br>
-          <strong>Accessed on:</strong> May 28, 2024<br>
-          <strong>Type:</strong> Webpage<br>
-          <strong>Abstract:</strong> The AYLA website on traditional woodcrafts describes the history and techniques of wooden shipbuilding in Greece. It analyses the importance of woodcrafts in the Greek maritime tradition and cultural heritage, highlighting the methods and tools used by the craftsmen. It also emphasizes the need to preserve this art due to the threat of modernization and changing shipbuilding practices.<br>
+          <strong>Title:</strong> 
+          ΕΛΛΗΝΙΚΗ ΠΑΡΑΔΟΣΙΑΚΗ ΝΑΥΠΗΓΙΚΗ<br>
+          <strong>Year:</strong> 2011<br>
+          <strong>Type:</strong> Book<br>
+          <strong>Publisher:</strong> ΕΤΒΑ ΠΟΛΙΤΙΣΤΙΚΟ ΤΕΧΝΟΛΟΓΙΚΟ ΙΔΡΥΜΑ<br>
+          <strong>Pages:</strong> 256<br>
+          <strong>ISBN:</strong> 9789602440384<br>
+          <strong>City:</strong> Athens<br>
+          <strong>Abstract:</strong> Until the beginning of our century, carpentry in modern Greece was one of the most vibrant productive industries and today provides rich material in the field of the history of the techniques. "Greek traditional shipbuilding", the result of many years of research, based on historical sources and valuable testimonies of the last surviving shipwrights, examines the construction techniques, the types and form of traditional boats, the tools, the types of shipbuilding timber, the design methods and the "building" of the boats.<br>
           <strong>URL:</strong> <a href="https://unescochair-dch.net/Wooden_Shipbuilding" target="_blank">https://unescochair-dch.net/Wooden_Shipbuilding</a><br>
         </div>
         <div class="pdf-column col-md-2 col-12">
@@ -373,15 +418,15 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>          
         </div>
         <div class="modal-body">
-          <iframe src="PDF/dialogos.pdf" style="width:100%; height:100%;" frameborder="0"></iframe>
+          <iframe src="PDF/dialogos-cy-se-katastasi-aposynthesis-to-istoriko-lampousa.pdf" style="width:100%; height:100%;" frameborder="0"></iframe>
         </div>
         <div class="modal-footer">
-          <a href="PDF/dialogos.pdf" class="btn btn-download" download>Download PDF</a>
+          <a href="PDF/dialogos-cy-se-katastasi-aposynthesis-to-istoriko-lampousa.pdf" class="btn btn-download" download>Download PDF</a>
           <!--<button type="button" class="btn btn-close" data-dismiss="modal">Close</button>-->
         </div>
       </div>
@@ -393,8 +438,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -413,8 +458,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -433,8 +478,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -453,8 +498,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -473,8 +518,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -493,8 +538,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -513,8 +558,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -533,8 +578,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">

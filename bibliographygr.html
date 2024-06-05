@@ -100,6 +100,10 @@ header a:hover {
   background-color: #6c757d; /* Grey button */
   color: white;
 }
+.btn-download:hover {
+  background-color: #5a6268; /* Darker grey */
+  color: white;
+}
 .btn-close {
   background-color: #007bff; /* Blue button */
   color: white;
@@ -110,6 +114,22 @@ header a:hover {
 }
 .btn-close:hover {
   background-color: #0056b3;
+}
+.btn-close-modern {
+  color: #7f7f7f;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-close-modern i {
+  font-size: 18px;
 }
 .no-scroll {
   overflow: hidden;
@@ -348,11 +368,15 @@ header a:hover {
       <div class="citation-entry row">
         <div class="citation-content col-md-10 col-12">
           <strong>Συγγραφέας(-είς):</strong> Κώστας Α. Δαμιανίδης<br>
-          <strong>Τίτλος:</strong> Ξυλοναυπηγική<br>
-          <strong>Έτος:</strong> 2013<br>
-          <strong>Ημερομηνία πρόσβασης:</strong> 28 Μαΐου 2024<br>
-          <strong>Τύπος:</strong> Ιστότοπος<br>
-          <strong>Περίληψη:</strong> Η ιστοσελίδα της AYLA για την παραδοσιακή ξυλοναυπηγική περιγράφει την ιστορία και τις τεχνικές της κατασκευής ξύλινων πλοίων στην Ελλάδα. Αναλύει τη σημασία της ξυλοναυπηγικής στην ελληνική ναυτική παράδοση και πολιτιστική κληρονομιά, αναδεικνύοντας τις μεθόδους και τα εργαλεία που χρησιμοποιούνται από τους τεχνίτες. Επίσης, τονίζει την ανάγκη διατήρησης αυτής της τέχνης λόγω της απειλής από τον εκσυγχρονισμό και την αλλαγή των ναυπηγικών πρακτικών.<br>
+          <strong>Τίτλος:</strong> 
+          ΕΛΛΗΝΙΚΗ ΠΑΡΑΔΟΣΙΑΚΗ ΝΑΥΠΗΓΙΚΗ<br>
+          <strong>Έτος:</strong> 2011<br>
+          <strong>Τύπος:</strong> Βιβλίο<br>
+          <strong>Εκδότης:</strong> ΕΤΒΑ ΠΟΛΙΤΙΣΤΙΚΟ ΤΕΧΝΟΛΟΓΙΚΟ ΙΔΡΥΜΑ<br>
+          <strong>Σελίδες:</strong> 256<br>
+          <strong>ISBN:</strong> 9789602440384<br>
+          <strong>Πόλη:</strong> Αθήνα<br>
+          <strong>Περίληψη:</strong> Η ξυλοναυπηγική στη νεότερη Ελλάδα αποτελούσε ως τις αρχές του αιώνα μας έναν από τους πιο ζωντανούς παραγωγικούς κλάδους και παρέχει σήμερα πλούσιο υλικό στον τομέα της ιστορίας των τεχνικών. Η «Ελληνική παραδοσιακή ναυπηγική», αποτέλεσμα πολυετούς έρευνας, βασισμένη σε ιστορικές πηγές και σε πολύτιμες μαρτυρίες των τελευταίων επιζώντων καραβομαραγκών, εξετάζει τις τεχνικές κατασκευής, τους τύπους και τη μορφή των παραδοσιακών σκαφών, τα εργαλεία, τα είδη της ναυπηγικής ξυλείας, τις μεθόδους σχεδιασμού και το «χτίσιμο» των σκαφών.<br>
           <strong>URL:</strong> <a href="https://unescochair-dch.net/Wooden_Shipbuilding" target="_blank">https://unescochair-dch.net/Wooden_Shipbuilding</a><br>
         </div>
         <div class="pdf-column col-md-2 col-12">
@@ -373,15 +397,15 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
-          <iframe src="PDF/dialogos.pdf" style="width:100%; height:100%;" frameborder="0"></iframe>
+          <iframe src="PDF/dialogos-cy-se-katastasi-aposynthesis-to-istoriko-lampousa.pdf" style="width:100%; height:100%;" frameborder="0"></iframe>
         </div>
         <div class="modal-footer">
-          <a href="PDF/dialogos.pdf" class="btn btn-download" download>Λήψη PDF</a>
+          <a href="PDF/dialogos-cy-se-katastasi-aposynthesis-to-istoriko-lampousa.pdf" class="btn btn-download" download>Λήψη PDF</a>
           <!--<button type="button" class="btn btn-close" data-dismiss="modal">Close</button>-->
         </div>
       </div>
@@ -393,8 +417,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -413,8 +437,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -433,8 +457,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -453,8 +477,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -473,8 +497,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -493,8 +517,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -513,8 +537,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
@@ -533,8 +557,8 @@ header a:hover {
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="pdfModalLabel1"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+          <button type="button" class="btn-close-modern" data-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
           </button>
         </div>
         <div class="modal-body">
