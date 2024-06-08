@@ -249,10 +249,6 @@ section > div {
   width: 80%;
   margin: 80px auto;
 }
-/* 
-.home-gallery.conatiner {
-  overflow: hidden !important;
-} */
 
 .title {
   text-align: center;
@@ -382,6 +378,12 @@ section > div {
   background-color: #1b1b1b;
   color: #fff;
   text-align: center;
+}
+
+@media screen and (max-width: 468px) {
+  .footer {
+    font-size: 12px;
+  }
 }
 
 .back-video {
@@ -1216,6 +1218,10 @@ img:hover {
 /* new classes classes  */
 .object-fit-cover {
   object-fit: cover;
+}
+
+.home-gallery{
+  margin-top: 130px;
 }
 
 .home-gallery img {
